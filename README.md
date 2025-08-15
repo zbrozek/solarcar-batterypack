@@ -22,16 +22,27 @@ This pack is a 32 series, 9 parallel (32s9p) arrangement of [21700 cells](https:
 Simple nickel sheet is pretty resistive and also dense. This design uses [aluminum bus bars with nickel inserts](https://www.everbestbattery.com/index.php?m=home&c=View&a=index&aid=171) for easy welding and high conductivity. Folded sheet metal also affords the opportunity for built-in studs for easy bolting where bolted joints cannot be avoided.
 
 ### Large modules
-This design uses only two 16s9p modules in order to dramatically cut down on the number of high-current bolted joints. Those are failure-prone and can easily cause battery pack fires by igniting nearby plastics if the bolted joints lose preload and become high impedance. This is likely to be a controversial choice; teams often want their packs to be more modular in order to have a smaller minimum serviceable unit. In my experience, packs get built once and then basically never touched again outside of reworks to address manufacturing defects. My goal is to enable a high-quality module to be built, tested, and installed once.
+This design uses only two 16s9p modules in order to dramatically cut down on the number of high-current bolted joints. Those are failure-prone and can easily cause battery pack fires by igniting nearby plastics if the bolted joints lose preload and become high impedance.
+
+This is likely to be a controversial choice; teams often want their packs to be more modular in order to have a smaller minimum serviceable unit. In my experience, packs get built once and then basically never touched again outside of reworks to address manufacturing defects. My goal is to enable a high-quality module to be built, tested, and installed once.
 
 ### Cell monitoring on the side of the module
 There is a large PCBA that mounts to the side of the module and is supposed to hold all of the cell monitoring and balancing electronics. This is to try and reduce the amount of wire harnessing inside of the battery pack, which is often failure-prone and easily shorted by accident.
+
+![Image of cell monitoring PCBA](assets/images/cell-monitor-pcba.jpg)
 
 ### Mostly sealed
 Aside from the deliberate air ingest and exhaust paths, the battery pack is theoretically sealed (assuming good manufacturing quality). Solar cars don't always enjoy sunny weather, so it's important to keep dust and water out. It uses the engine air filter to keep out dust.
 
 ### 3D-printed cell spacer plates
 The cell spacer plates are intended to be 3D printed in [PC FR](https://us.store.bambulab.com/products/pc-fr) with a 0.2 mm nozzle. I used a Bambu H2D. There are a number of features that would be difficult or impossible to replicate without 3D printing, like the zero-draft shields that prevent you from losing screws into the forest of cels, or the fluid channels that deliver low-viscosity glue to hold the cells in place.
+
+### Shields
+There are baffles that make it difficult to accidentally contact the sense taps on the bent parts of the bus bars:
+![Image of a voltage sense tap with shielding plastic which makes it hard to accidentally contact the terminal.](assets/images/shielded-cell-tap.jpg)
+
+There are also shields which go on the top side of the modules to reduce risks associated with leans and drops:
+![Image of a plastic shields covering bus bars.](assets/images/top-shield.jpg)
 
 ## How do I use this?
 A team looking to use this design will probably want to fork it and modify it to suit their vehicle. If you have any ideas for improvements, please file issues or create PRs and I'll consider including them upstream. Note that WSC and ASC have differing pack energy limitations, and so you may need to alter the number of parallel cells to match.
