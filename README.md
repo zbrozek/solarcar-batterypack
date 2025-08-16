@@ -37,7 +37,14 @@ There is a large PCBA that mounts to the side of the module and is supposed to h
 Aside from the deliberate air ingest and exhaust paths, the battery pack is theoretically sealed (assuming good manufacturing quality). Solar cars don't always enjoy sunny weather, so it's important to keep dust and water out. It uses the engine air filter to keep out dust.
 
 ### 3D-printed cell spacer plates
-The cell spacer plates are intended to be 3D printed in [PC FR](https://us.store.bambulab.com/products/pc-fr) with a 0.2 mm nozzle. I used a Bambu H2D. There are a number of features that would be difficult or impossible to replicate without 3D printing, like the zero-draft shields that prevent you from losing screws into the forest of cels, or the fluid channels that deliver low-viscosity glue to hold the cells in place.
+The cell spacer plates are intended to be 3D printed in [PC FR](https://us.store.bambulab.com/products/pc-fr) with a 0.2 mm nozzle. I used a Bambu H2D. There are a number of features that would be difficult or impossible to replicate without 3D printing, like the zero-draft shields that prevent you from losing screws into the forest of cells:
+
+![Image of an anti-screw-loss shield.](assets/images/anti-screw-loss-shield.jpg)
+
+...or the fluid channels that deliver low-viscosity glue to hold the cells in place:
+
+![Image of a fluid channel for glue delivery for cell retention.](assets/images/glue-injection-path.jpg)
+
 
 ### Mid-pack main fuse
 A mid-pack fuse is a convenient way to halve the available electric potential (and thus quarter the available fault power) after a fault or during service. I prefer them to high- or low-side fuses. The mid-pack installation location also leverages the pack symmetry to reduce the total number of bolted joints.
@@ -58,6 +65,15 @@ This design will come with a number of assembly aids to help with ergonomics, sa
 
 ![Image of a carry handle.](assets/images/temporary-carry-handle.jpg)
 
+## What's not done yet?
+Lots! Off the top of my head:
+- The air ingest filter hasn't been modeled and I haven't come up with a way to retain it.
+- I haven't designed the duct-side collars.
+- There is no sealing plug to prevent airflow from short-circuiting around the fuse yet.
+- Ditto for the fuse-side harness passthrough between the two cell monitoring boards.
+- There is no fuse cover yet.
+- THere is no HV terminal cover yet.
+- I don't like the LV battery retention scheme and will probably do it again.
 
 ## How do I use this?
 A team looking to use this design will probably want to fork it and modify it to suit their vehicle. If you have any ideas for improvements, please file issues or create PRs and I'll consider including them upstream. Note that WSC and ASC have differing pack energy limitations, and so you may need to alter the number of parallel cells to match.
