@@ -21,6 +21,8 @@ This pack is a 32 series, 9 parallel (32s9p) arrangement of [21700 cells](https:
 ### Hybrid bus bars
 Simple nickel sheet is pretty resistive and also dense. This design uses [aluminum bus bars with nickel inserts](https://www.everbestbattery.com/index.php?m=home&c=View&a=index&aid=171) for easy welding and high conductivity. Folded sheet metal also affords the opportunity for built-in studs for easy bolting where bolted joints cannot be avoided.
 
+![Image of bus bars](assets/images/hybrid-bus-bars.jpg)
+
 ### Large modules
 This design uses only two 16s9p modules in order to dramatically cut down on the number of high-current bolted joints. Those are failure-prone and can easily cause battery pack fires by igniting nearby plastics if the bolted joints lose preload and become high impedance.
 
@@ -39,10 +41,18 @@ The cell spacer plates are intended to be 3D printed in [PC FR](https://us.store
 
 ### Shields
 There are baffles that make it difficult to accidentally contact the sense taps on the bent parts of the bus bars:
+
 ![Image of a voltage sense tap with shielding plastic which makes it hard to accidentally contact the terminal.](assets/images/shielded-cell-tap.jpg)
 
 There are also shields which go on the top side of the modules to reduce risks associated with leans and drops:
+
 ![Image of a plastic shields covering bus bars.](assets/images/top-shield.jpg)
+
+### Assembly aids
+This design will come with a number of assembly aids to help with ergonomics, safety, or assembly quality. The first of these is a temporary handle that gets attached via screws from above while lifting and lowering the large modules into place into the battery pack.
+
+![Image of a carry handle.](assets/images/temporary-carry-handle.jpg)
+
 
 ## How do I use this?
 A team looking to use this design will probably want to fork it and modify it to suit their vehicle. If you have any ideas for improvements, please file issues or create PRs and I'll consider including them upstream. Note that WSC and ASC have differing pack energy limitations, and so you may need to alter the number of parallel cells to match.
