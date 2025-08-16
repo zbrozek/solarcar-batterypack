@@ -1,4 +1,5 @@
 # Open-source battery pack for solar cars
+![Image of battery pack](assets/images/pack-in-progress.jpg)
 
 ## What is this?
 This is the mechanical assembly for a battery pack intended for solar cars competing in common races like ASC or WSC. It's designed to be reasonably easy to fabricate and assemble, but without significantly compromising the quality of the design.
@@ -72,8 +73,10 @@ Lots! Off the top of my head:
 - There is no sealing plug to prevent airflow from short-circuiting around the fuse yet.
 - Ditto for the fuse-side harness passthrough between the two cell monitoring boards.
 - There is no fuse cover yet.
-- THere is no HV terminal cover yet.
+- There is no HV terminal cover yet.
 - I don't like the LV battery retention scheme and will probably do it again.
+- Need to design assembly aids for centering the aluminum plates when gluing them to the chassis.
+- Need to design assembly aids for setting the hasp Z height correctly.
 
 ## How do I use this?
 A team looking to use this design will probably want to fork it and modify it to suit their vehicle. If you have any ideas for improvements, please file issues or create PRs and I'll consider including them upstream. Note that WSC and ASC have differing pack energy limitations, and so you may need to alter the number of parallel cells to match.
