@@ -39,6 +39,11 @@ Aside from the deliberate air ingest and exhaust paths, the battery pack is theo
 ### 3D-printed cell spacer plates
 The cell spacer plates are intended to be 3D printed in [PC FR](https://us.store.bambulab.com/products/pc-fr) with a 0.2 mm nozzle. I used a Bambu H2D. There are a number of features that would be difficult or impossible to replicate without 3D printing, like the zero-draft shields that prevent you from losing screws into the forest of cels, or the fluid channels that deliver low-viscosity glue to hold the cells in place.
 
+### Mid-pack main fuse
+A mid-pack fuse is a convenient way to halve the available electric potential (and thus quarter the available fault power) after a fault or during service. I prefer them to high- or low-side fuses. The mid-pack installation location also leverages the pack symmetry to reduce the total number of bolted joints.
+
+![Image of a fuse installed at the pack midpoint.](assets/images/mid-pack-fuse.jpg)
+
 ### Shields
 There are baffles that make it difficult to accidentally contact the sense taps on the bent parts of the bus bars:
 
