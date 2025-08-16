@@ -4,7 +4,7 @@
 This is the mechanical assembly for a battery pack intended for solar cars competing in common races like ASC or WSC. It's designed to be reasonably easy to fabricate and assemble, but without significantly compromising the quality of the design.
 
 ## Who are you?
-I'm Sasha Zbrozek and was trained as an electrical engineer. I was on Stanford's solar car team from 2006 through 2010 and continue to participate with them and the broader solar car community from the comfort of my golden years. I have a normal day job that takes up most of my time, but we've all got to have hobbies.
+I'm Sasha Zbrozek and I was trained as an electrical engineer. I was on Stanford's solar car team from 2006 through 2010 and continue to participate with them and the broader solar car community from the comfort of my golden years. I have a normal day job that takes up most of my time, but we've all got to have hobbies.
 
 ## Why did you make this?
 I participated as a staff member in the 2025 Formula Sun Grand Prix and enjoyed working with the students immensely. I think the community would benefit from having more open-source hardware and software available for students to take, modify, and improve.
