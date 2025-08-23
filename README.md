@@ -68,12 +68,10 @@ This design will come with a number of assembly aids to help with ergonomics, sa
 
 ## What's not done yet?
 Lots! Off the top of my head:
-- The air ingest filter hasn't been modeled and I haven't come up with a way to retain it.
 - I haven't designed the duct-side collars.
 - There is no sealing plug to prevent airflow from short-circuiting around the fuse yet.
 - Ditto for the fuse-side harness passthrough between the two cell monitoring boards.
 - There is no fuse cover yet.
-- There is no HV terminal cover yet.
 - I don't like the LV battery retention scheme and will probably do it again.
 - Need to design assembly aids for centering the aluminum plates when gluing them to the chassis.
 - Need to design assembly aids for setting the hasp Z height correctly.
