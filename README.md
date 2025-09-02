@@ -68,7 +68,6 @@ This design will come with a number of assembly aids to help with ergonomics, sa
 
 ## What's not done yet?
 Lots! Off the top of my head:
-- I haven't designed the duct-side collars.
 - There is no sealing plug to prevent airflow from short-circuiting around the fuse yet.
 - Ditto for the fuse-side harness passthrough between the two cell monitoring boards.
 - There is no fuse cover yet.
