@@ -18,6 +18,6 @@ I'm using a Brother QL-720NW label printer, which has been obsolete for years. A
 
 For labels, either the [DK1221](https://www.brother-usa.com/products/dk1221) or [DK2214](https://www.brother-usa.com/products/dk2214) seem like reasonable labels. I used a [knock-off version](https://www.amazon.com/dp/B08Q7VB3YZ) of the latter because it was available as a plastic film which I prefer over paper for durability and thinness.
 
-Follow [this guide](https://support.brother.com/g/b/faqend.aspx?c=us&lang=en&prod=3600eus&faqid=faqp00001040_003) to put together a label using the (P-Touch Editor software)[https://www.brother-usa.com/ptouch/ptouch-label-editor-software].
+Follow [this guide](https://support.brother.com/g/b/faqend.aspx?c=us&lang=en&prod=3600eus&faqid=faqp00001040_003) to put together a label using the [P-Touch Editor software](https://www.brother-usa.com/ptouch/ptouch-label-editor-software).
 
 Of course there are many other ways to label the cells, including just a marker.
