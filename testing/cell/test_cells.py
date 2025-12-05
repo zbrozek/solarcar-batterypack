@@ -55,20 +55,6 @@ class Keithley2430:
         else:
             print(f"Mocking connection to {resource_name}")
 
-    def test_connection(self):
-        """Tests the connection to the instrument by querying its ID."""
-        if self.mock:
-            print("Mock connection successful.")
-            return True
-        
-        try:
-            idn = self.inst.query("*IDN?")
-            print(f"Connection successful. Instrument ID: {idn.strip()}")
-            return True
-        except Exception as e:
-            print(f"Connection failed: {e}")
-            return False
-
     @staticmethod
     def CleanString(inputString):
         return "".join(filter(lambda x: x in string.printable, inputString))
@@ -96,6 +82,13 @@ class Keithley2430:
     def output_off(self):
         if not self.mock:
             self.inst.write(":OUTP OFF")
+    
+    def beep_success(self):
+        if not self.mock:
+            self.inst.write("SYST:BEEP:IMM 1400, 0.1")
+            time.sleep(0.1)
+            self.inst.write("SYST:BEEP:IMM 2000, 0.05")
+            time.sleep(0.05)
 
     def measure_voltage(self):
         if self.mock: return 3.7
@@ -150,6 +143,21 @@ class Keithley2430:
         
         return result
 
+    def test_connection(self):
+        """Tests the connection to the instrument by querying its ID."""
+        if self.mock:
+            print("Mock connection successful.")
+            return True
+        
+        try:
+            idn = self.inst.query("*IDN?")
+            self.beep_success()
+            print(f"Connection successful. Instrument ID: {idn.strip()}")
+            return True
+        except Exception as e:
+            print(f"Connection failed: {e}")
+            return False
+
 def run_tests(inst, serial_number):
     print(f"Testing cell {serial_number}...")
     
@@ -158,8 +166,6 @@ def run_tests(inst, serial_number):
     inst.source_current(0.0, kChargeComplianceLimit_volts)
     time.sleep(kVoltageSenseDwell_seconds)
     ocv = inst.measure_voltage()
-    print(f"  OCV: {ocv:.4f} V")
-
     print(f"  OCV: {ocv:.4f} V")
 
     # 2. R0 Estimate
@@ -177,7 +183,7 @@ def run_tests(inst, serial_number):
 
     # Discharge Pulse
     print(f"  Pulsing {-kR0PulseCurrent_amps}A for {kR0PulseDuration_seconds}s...")
-    v_load_discharge = inst.source_pulse_current(-kR0PulseCurrent_amps, kChargeComplianceLimit_volts, kR0PulseDuration_seconds)
+    v_load_discharge = inst.source_pulse_current(-kR0PulseCurrent_amps, kDischargeCompianceLimit_volts, kR0PulseDuration_seconds)
 
     r_charge = (v_load_charge - v_idle_charge) / kR0PulseCurrent_amps
     r_discharge = (v_idle_discharge - v_load_discharge) / kR0PulseCurrent_amps # Delta V / Delta I. Delta I is positive magnitude here.
@@ -202,7 +208,7 @@ def run_tests(inst, serial_number):
 
     # Discharge
     print(f"  Sourcing {-kDcirCurrent_amps}A for {kDcirDuration_seconds} seconds...")
-    inst.source_current(-kDcirCurrent_amps, kChargeComplianceLimit_volts)
+    inst.source_current(-kDcirCurrent_amps, kDischargeCompianceLimit_volts)
     inst.output_on()
     time.sleep(kDcirDuration_seconds)
     v_load_discharge_dcir = inst.measure_voltage()
@@ -269,6 +275,7 @@ def main():
                     writer.writerow(results)
                 
                 print(f"Test complete for {serial_number}. Results saved.")
+                inst.beep_success()
                 
             except KeyboardInterrupt:
                 break
