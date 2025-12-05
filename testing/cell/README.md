@@ -21,22 +21,19 @@ All of the cells should be in thermal steady state in a temperature-controlled r
 The instrument is in four wire sensing mode. If the wires are shielded, the shield should be driven by the guard output of the instrument.
 ## Open circuit voltage
 This is a very simple test. The source meter is placed in current-source mode with a zero current target, and the voltage at the terminals is measured over a short interval.
-## Leakage current
-The meter is set to source the cell's open circuit voltage and with a small current limit. The actual current consumed by the cell will be its leakage current.
+## R0 estimate
+The cell voltage is measured with the cell idle (identical to the open circuit voltage test), and then again while sourcing a short high-current pulse. The dV/dI is the charging resistance. The tool then does this again, but discharging. This yields the discharging resistance. The average of the two is used as an estimate of the R0 impedance of the cell at the current state of charge. This should mostly be a measurement of the simple mechanical resistances and have little to do with the chemistry.
 ## DC impedance estimate
-The cell voltage is measured with the cell idle (identical to the open circuit voltage test), and then again while sourcing a short high-current pulse. The dV/dI is the charging resistance. The tool then does this again, but discharging. This yields the discharging resistance. The average of the two is used as an estimate of the DC impedance of the cell at the current state of charge.
-## dQ/dV capacity estimate
-This test runs longer than the pulse test above, and captures the change in voltage produced  by the injection of a certain amount of charge. Another data point is captured by discharging the cell of the same amount of charge. The slope of voltage with charge is a proxy for capacity.
+This test is similar to the R0 estimate, but uses a much longer pulse in order to try and get an estimate of the DC impedance. 
 
 # Configurable parameters
 Some constants defined at the top of the script can be tweaked to suit your particular cell parameters:
 * _kChargeComplianceLimit_volts_ sets the upper voltage limit when sourcing current into the cell.
 * _kDischargeCompianceLimit_volts_ sets the lower voltage limit when sinking current out of the cell.
-* _kLeakageCompliantLimit_amps_ sets the maximum current used for measuring cell leakage.
-* _kDcirPulseCurrent_amps_ sets the pulse current used when estimating the DC impedance of the cell at the current state of charge.
+* _kR0PulseCurrent_amps_ sets the pulse current used when estimating the R0 impedance of the cell.
+* _kR0PulseDuration_seconds_ sets the length of the pulse when testing the R0 impedance of the cell.
+* _kDcirPulseCurrent_amps_ sets the pulse current used when estimating the DC impedance of the cell.
 * _kDcirPulseDuration_seconds_ sets the length of the pulse when testing the DC impedance of the cell.
-* _kDqDvCurrent_amps_ sets the steady state current used when charging or discharging the cell to estimate the capacity relative to other cells of the same design.
-* _kDqDvDuration_seconds_ sets the time that the steady state current will be applied. Its product with _kDqDvCurrent_amps_ sets the amount of charge sourced into our sunk out of the cell.
 * _kLeakageDwellTime_seconds_ sets the time that the instrument will wait for the current to settle to determine the leakage of the cell.
 
 # Handy links
