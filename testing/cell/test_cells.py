@@ -22,15 +22,16 @@ if missing_packages:
 # Configurable parameters
 kChargeComplianceLimit_volts = 4.2
 kDischargeCompianceLimit_volts = 2.5
-kLeakageCompliantLimit_amps = 1e-3  # 1 mA
-kDcirPulseCurrent_amps = 10.0
-kDcirPulseDuration_seconds = 0.0025
-kDqDvCurrent_amps = 1.0
-kDqDvDuration_seconds = 1.0
+kLeakageCompliantLimit_amps = 1e-3
+kR0PulseCurrent_amps = 10.0
+kR0PulseDuration_seconds = 0.0025
+kDcirCurrent_amps = 3.0
+kDcirDuration_seconds = 10.0
 kLeakageDwellTime_seconds = 1.0
+kVoltageSenseDwell_seconds = 0.1
 
 class Keithley2430:
-    def __init__(self, resource_name, mock=False):
+    def __init__(self, resource_name, mock=False, terminals='front'):
         self.mock = mock
         if not self.mock:
             rm = pyvisa.ResourceManager()
@@ -46,8 +47,28 @@ class Keithley2430:
                 )
             self.inst.write("*RST")
             self.inst.write(":SYST:RSEN ON") # 4-wire mode
+            
+            # Select terminals
+            if terminals.lower() == 'rear':
+                self.inst.write(":ROUT:TERM REAR")
+            else:
+                self.inst.write(":ROUT:TERM FRONT")
         else:
             print(f"Mocking connection to {resource_name}")
+
+    def test_connection(self):
+        """Tests the connection to the instrument by querying its ID."""
+        if self.mock:
+            print("Mock connection successful.")
+            return True
+        
+        try:
+            idn = self.inst.query("*IDN?")
+            print(f"Connection successful. Instrument ID: {idn.strip()}")
+            return True
+        except Exception as e:
+            print(f"Connection failed: {e}")
+            return False
 
     def close(self):
         if not self.mock:
@@ -90,18 +111,23 @@ class Keithley2430:
         if self.mock:
             return 3.8 if current > 0 else 3.6 # Mock voltage rise/drop
         
-        # Configure Pulse Mode
-        self.inst.write(":SOUR:FUNC PULS:CURR")
-        self.inst.write(f":SOUR:PULS:CURR:LEV {current}")
+        # Configure pulse mode
+        self.inst.write(":SOUR:FUNC:SHAP PULS")
+        self.inst.write(":SOUR:FUNC:MODE CURR")
+        self.inst.write(f":SOUR:CURR:LEV {current}")
         self.inst.write(f":SENS:VOLT:PROT {voltage_limit}")
+        self.inst.write("SENS:FUNC \"VOLT\"")
         self.inst.write(f":SOUR:PULS:WIDT {width}")
         self.inst.write(f":SOUR:PULS:DEL {delay}")
+
+        # Configure for one pulse
+        self.inst.write(":TRIG:CLE")
+        self.inst.write(":ARM:COUN 1")
+        self.inst.write(":TRIG:COUN 1")
         
-        # Enable output and trigger measurement
-        self.inst.write(":OUTP ON")
-        # :READ? initiates the pulse sequence and returns the measurement
+        # :READ? initiates the pulse sequence and returns the measurement.
+        # Pulse mode automatically turns the output on and off.
         result = float(self.inst.query(":READ?"))
-        self.inst.write(":OUTP OFF")
         
         return result
 
@@ -112,7 +138,7 @@ def run_tests(inst, serial_number):
     print("  Measuring OCV...")
     inst.source_current(0.0, kChargeComplianceLimit_volts)
     inst.output_on()
-    time.sleep(0.5) # Settle
+    time.sleep(kVoltageSenseDwell_seconds)
     ocv = inst.measure_voltage()
     inst.output_off()
     print(f"  OCV: {ocv:.4f} V")
@@ -126,69 +152,62 @@ def run_tests(inst, serial_number):
     inst.output_off()
     print(f"  Leakage: {leakage:.4e} A")
 
-    # 3. DC Impedance Estimate
-    print("  Measuring DC Impedance...")
+    # 3. R0 Estimate
+    print("  Measuring R0...")
     # Measure idle voltage for charge
-    inst.source_current(0.0, kChargeComplianceLimit_volts)
-    inst.output_on()
-    time.sleep(0.5)
     v_idle_charge = inst.measure_voltage()
-    inst.output_off()
     
     # Charge Pulse
-    print(f"  Pulsing {kDcirPulseCurrent_amps}A for {kDcirPulseDuration_seconds}s...")
-    v_load_charge = inst.source_pulse_current(kDcirPulseCurrent_amps, kChargeComplianceLimit_volts, kDcirPulseDuration_seconds)
+    print(f"  Pulsing {kR0PulseCurrent_amps}A for {kR0PulseDuration_seconds}s...")
+    v_load_charge = inst.source_pulse_current(kR0PulseCurrent_amps, kChargeComplianceLimit_volts, kR0PulseDuration_seconds)
     
     # Measure idle voltage for discharge
-    inst.source_current(0.0, kChargeComplianceLimit_volts)
-    inst.output_on()
-    time.sleep(0.5)
     v_idle_discharge = inst.measure_voltage()
-    inst.output_off()
 
     # Discharge Pulse
-    print(f"  Pulsing {-kDcirPulseCurrent_amps}A for {kDcirPulseDuration_seconds}s...")
-    v_load_discharge = inst.source_pulse_current(-kDcirPulseCurrent_amps, kChargeComplianceLimit_volts, kDcirPulseDuration_seconds)
+    print(f"  Pulsing {-kR0PulseCurrent_amps}A for {kR0PulseDuration_seconds}s...")
+    v_load_discharge = inst.source_pulse_current(-kR0PulseCurrent_amps, kChargeComplianceLimit_volts, kR0PulseDuration_seconds)
 
-    r_charge = (v_load_charge - v_idle_charge) / kDcirPulseCurrent_amps
-    r_discharge = (v_idle_discharge - v_load_discharge) / kDcirPulseCurrent_amps # Delta V / Delta I. Delta I is positive magnitude here.
-    dc_impedance = (r_charge + r_discharge) / 2.0
-    print(f"  DC Impedance: {dc_impedance:.4f} Ohm")
+    r_charge = (v_load_charge - v_idle_charge) / kR0PulseCurrent_amps
+    r_discharge = (v_idle_discharge - v_load_discharge) / kR0PulseCurrent_amps # Delta V / Delta I. Delta I is positive magnitude here.
+    r0 = (r_charge + r_discharge) / 2.0
+    print(f"  R0: {r0:.4f} Ohm")
 
-    # 4. dQ/dV Capacity Estimate
-    print("  Measuring dQ/dV...")
-    # Charge
-    inst.source_current(kDqDvCurrent_amps, kChargeComplianceLimit_volts)
-    inst.output_on()
-    v_start_charge = inst.measure_voltage()
-    time.sleep(kDqDvDuration_seconds)
-    v_end_charge = inst.measure_voltage()
+    # 4. DCIR Test
+    print("  Measuring DCIR...")
+    # Measure idle voltage for charge
+    v_idle_charge_dcir = inst.measure_voltage()
     
-    dq_charge = kDqDvCurrent_amps * kDqDvDuration_seconds
-    dv_charge = v_end_charge - v_start_charge
-    dqdv_charge = dv_charge / dq_charge if dq_charge != 0 else 0
-
-    # Discharge
-    inst.source_current(-kDqDvCurrent_amps, kChargeComplianceLimit_volts)
-    v_start_discharge = inst.measure_voltage()
-    time.sleep(kDqDvDuration_seconds)
-    v_end_discharge = inst.measure_voltage()
+    # Charge
+    print(f"  Sourcing {kDcirCurrent_amps}A for {kDcirDuration_seconds} seconds...")
+    inst.source_current(kDcirCurrent_amps, kChargeComplianceLimit_volts)
+    inst.output_on()
+    time.sleep(kDcirDuration_seconds)
+    v_load_charge_dcir = inst.measure_voltage()
     inst.output_off()
 
-    dq_discharge = kDqDvCurrent_amps * kDqDvDuration_seconds # Magnitude
-    dv_discharge = v_start_discharge - v_end_discharge # Magnitude of drop
-    dqdv_discharge = dv_discharge / dq_discharge if dq_discharge != 0 else 0
-    
-    print(f"  dQ/dV Charge: {dqdv_charge:.4f} V/C")
-    print(f"  dQ/dV Discharge: {dqdv_discharge:.4f} V/C")
+    # Measure idle voltage for discharge
+    v_idle_discharge_dcir = inst.measure_voltage()
+
+    # Discharge
+    print(f"  Sourcing {-kDcirCurrent_amps}A for {kDcirDuration_seconds} seconds...")
+    inst.source_current(-kDcirCurrent_amps, kChargeComplianceLimit_volts)
+    inst.output_on()
+    time.sleep(kDcirDuration_seconds)
+    v_load_discharge_dcir = inst.measure_voltage()
+    inst.output_off()
+
+    r_charge_dcir = (v_load_charge_dcir - v_idle_charge_dcir) / kDcirCurrent_amps
+    r_discharge_dcir = (v_idle_discharge_dcir - v_load_discharge_dcir) / kDcirCurrent_amps
+    dcir = (r_charge_dcir + r_discharge_dcir) / 2.0
+    print(f"  DCIR: {dcir:.4f} Ohm")
 
     results = {
         "Serial Number": serial_number,
         "OCV (V)": ocv,
         "Leakage (A)": leakage,
-        "DC Impedance (Ohm)": dc_impedance,
-        "Charging dV/dQ (V/C)": dqdv_charge,
-        "Discharging dV/dQ (V/C)": dqdv_discharge
+        "R0 (Ohm)": r0,
+        "DCIR (Ohm)": dcir
     }
     
     return results
@@ -198,10 +217,12 @@ def main():
     parser.add_argument("output_csv", help="Path to the output CSV file")
     parser.add_argument("--resource", default="GPIB0::24::INSTR", help="VISA resource string for Keithley 2430")
     parser.add_argument("--mock", action="store_true", help="Run in mock mode without hardware")
+    parser.add_argument("--terminals", choices=['front', 'rear'], default='front', help="Select front or rear terminals (default: front)")
+    parser.add_argument("--test-connection", action="store_true", help="Test connection to the instrument and exit")
     args = parser.parse_args()
 
     # Initialize CSV
-    fieldnames = ["Serial Number", "OCV (V)", "Leakage (A)", "DC Impedance (Ohm)", "Charging dV/dQ (V/C)", "Discharging dV/dQ (V/C)"]
+    fieldnames = ["Serial Number", "OCV (V)", "Leakage (A)", "R0 (Ohm)", "DCIR (Ohm)"]
     
     # Check if file exists to decide whether to write header
     try:
@@ -212,8 +233,12 @@ def main():
         pass # Append to existing file
 
     try:
-        inst = Keithley2430(args.resource, mock=args.mock)
+        inst = Keithley2430(args.resource, mock=args.mock, terminals=args.terminals)
         
+        if args.test_connection:
+            success = inst.test_connection()
+            sys.exit(0 if success else 1)
+
         while True:
             try:
                 serial_number = input("Scan barcode (or 'q' to quit): ").strip()
