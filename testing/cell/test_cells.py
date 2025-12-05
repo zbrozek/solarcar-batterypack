@@ -2,6 +2,9 @@ import argparse
 import csv
 import time
 import sys
+import string
+import pyvisa
+
 required_packages = {
     'pyvisa': 'pyvisa',
     'serial': 'pyserial'
@@ -18,16 +21,13 @@ if missing_packages:
     print(f"The following packages are missing: {', '.join(missing_packages)}")
     sys.exit(1)
 
-
 # Configurable parameters
 kChargeComplianceLimit_volts = 4.2
 kDischargeCompianceLimit_volts = 2.5
-kLeakageCompliantLimit_amps = 1e-3
 kR0PulseCurrent_amps = 10.0
 kR0PulseDuration_seconds = 0.0025
 kDcirCurrent_amps = 3.0
 kDcirDuration_seconds = 10.0
-kLeakageDwellTime_seconds = 1.0
 kVoltageSenseDwell_seconds = 0.1
 
 class Keithley2430:
@@ -41,7 +41,6 @@ class Keithley2430:
                 data_bits=8,
                 parity=pyvisa.constants.Parity.none,
                 stop_bits=pyvisa.constants.StopBits.one,
-                flow_control=pyvisa.constants.VI_ASRL_FLOW_NONE,
                 write_termination="\n",
                 read_termination="\n",
                 )
@@ -70,6 +69,21 @@ class Keithley2430:
             print(f"Connection failed: {e}")
             return False
 
+    @staticmethod
+    def CleanString(inputString):
+        return "".join(filter(lambda x: x in string.printable, inputString))
+
+    @staticmethod
+    def ParseReading(inputString):
+        cleanedString = Keithley2430.CleanString(inputString)
+        splitString = cleanedString.split(',')
+        dataDict = {'voltage': float(splitString[0]), \
+                    'current': float(splitString[1]), \
+                    'resistance': float(splitString[2]), \
+                    'time': float(splitString[3]), \
+                    'status': float(splitString[4])}
+        return dataDict
+
     def close(self):
         if not self.mock:
             self.inst.write(":OUTP OFF")
@@ -85,16 +99,19 @@ class Keithley2430:
 
     def measure_voltage(self):
         if self.mock: return 3.7
+        self.inst.write(":SOUR:FUNC:SHAP DC")
         # :READ? triggers a measurement based on current configuration
-        return float(self.inst.query(":MEAS:VOLT?"))
+        return self.ParseReading(self.inst.query(":MEAS:VOLT?"))['voltage']
 
     def measure_current(self):
         if self.mock: return 0.0
-        return float(self.inst.query(":MEAS:CURR?"))
+        self.inst.write(":SOUR:FUNC:SHAP DC")
+        return self.ParseReading(self.inst.query(":MEAS:CURR?"))['current']
 
     def source_current(self, current, voltage_limit):
         """Sets the source to current mode with a voltage compliance limit."""
         if not self.mock:
+            self.inst.write(":SOUR:FUNC:SHAP DC")
             self.inst.write(":SOUR:FUNC CURR")
             self.inst.write(f":SOUR:CURR {current}")
             self.inst.write(f":SENS:VOLT:PROT {voltage_limit}")
@@ -102,6 +119,7 @@ class Keithley2430:
     def source_voltage(self, voltage, current_limit):
         """Sets the source to voltage mode with a current compliance limit."""
         if not self.mock:
+            self.inst.write(":SOUR:FUNC:SHAP DC")
             self.inst.write(":SOUR:FUNC VOLT")
             self.inst.write(f":SOUR:VOLT {voltage}")
             self.inst.write(f":SENS:CURR:PROT {current_limit}")
@@ -114,6 +132,7 @@ class Keithley2430:
         # Configure pulse mode
         self.inst.write(":SOUR:FUNC:SHAP PULS")
         self.inst.write(":SOUR:FUNC:MODE CURR")
+        self.inst.write(":SENS:VOLT:RANG 20")
         self.inst.write(f":SOUR:CURR:LEV {current}")
         self.inst.write(f":SENS:VOLT:PROT {voltage_limit}")
         self.inst.write("SENS:FUNC \"VOLT\"")
@@ -127,7 +146,7 @@ class Keithley2430:
         
         # :READ? initiates the pulse sequence and returns the measurement.
         # Pulse mode automatically turns the output on and off.
-        result = float(self.inst.query(":READ?"))
+        result = self.ParseReading(self.inst.query(":READ?"))['voltage']
         
         return result
 
@@ -137,22 +156,13 @@ def run_tests(inst, serial_number):
     # 1. Open Circuit Voltage
     print("  Measuring OCV...")
     inst.source_current(0.0, kChargeComplianceLimit_volts)
-    inst.output_on()
     time.sleep(kVoltageSenseDwell_seconds)
     ocv = inst.measure_voltage()
-    inst.output_off()
     print(f"  OCV: {ocv:.4f} V")
 
-    # 2. Leakage Current
-    print("  Measuring Leakage...")
-    inst.source_voltage(ocv, kLeakageCompliantLimit_amps)
-    inst.output_on()
-    time.sleep(kLeakageDwellTime_seconds)
-    leakage = inst.measure_current()
-    inst.output_off()
-    print(f"  Leakage: {leakage:.4e} A")
+    print(f"  OCV: {ocv:.4f} V")
 
-    # 3. R0 Estimate
+    # 2. R0 Estimate
     print("  Measuring R0...")
     # Measure idle voltage for charge
     v_idle_charge = inst.measure_voltage()
@@ -162,6 +172,7 @@ def run_tests(inst, serial_number):
     v_load_charge = inst.source_pulse_current(kR0PulseCurrent_amps, kChargeComplianceLimit_volts, kR0PulseDuration_seconds)
     
     # Measure idle voltage for discharge
+    print("  Measuring OCV...")
     v_idle_discharge = inst.measure_voltage()
 
     # Discharge Pulse
@@ -173,7 +184,7 @@ def run_tests(inst, serial_number):
     r0 = (r_charge + r_discharge) / 2.0
     print(f"  R0: {r0:.4f} Ohm")
 
-    # 4. DCIR Test
+    # 3. DCIR Test
     print("  Measuring DCIR...")
     # Measure idle voltage for charge
     v_idle_charge_dcir = inst.measure_voltage()
@@ -205,9 +216,12 @@ def run_tests(inst, serial_number):
     results = {
         "Serial Number": serial_number,
         "OCV (V)": ocv,
-        "Leakage (A)": leakage,
         "R0 (Ohm)": r0,
-        "DCIR (Ohm)": dcir
+        "R0 Charge (Ohm)": r_charge,
+        "R0 Discharge (Ohm)": r_discharge,
+        "DCIR (Ohm)": dcir,
+        "DCIR Charge (Ohm)": r_charge_dcir,
+        "DCIR Discharge (Ohm)": r_discharge_dcir
     }
     
     return results
@@ -222,7 +236,8 @@ def main():
     args = parser.parse_args()
 
     # Initialize CSV
-    fieldnames = ["Serial Number", "OCV (V)", "Leakage (A)", "R0 (Ohm)", "DCIR (Ohm)"]
+    # Initialize CSV
+    fieldnames = ["Serial Number", "OCV (V)", "R0 (Ohm)", "R0 Charge (Ohm)", "R0 Discharge (Ohm)", "DCIR (Ohm)", "DCIR Charge (Ohm)", "DCIR Discharge (Ohm)"]
     
     # Check if file exists to decide whether to write header
     try:
