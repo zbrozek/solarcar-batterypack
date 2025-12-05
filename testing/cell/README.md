@@ -5,7 +5,7 @@ Cells have varying incoming quality and we want to reject weak or bad cells. The
 You will need:
 * Pulse-capable Keithley source meter connected to your computer. I use a [Keithley 2430](https://www.tek.com/en/products/keithley/source-measure-units/2400-graphical-series-sourcemeter).
 * 4-terminal battery chuck. I use [these, 15 amp flavor](https://a2delectronics.ca/shop/battery-testing/4-wire-cell-holder/).
-* Barcode scanner
+* Barcode scanner. I have [this thing](https://www.amazon.com/dp/B01M264K5L).
 * Serialized batteries
 * Python 
 
