@@ -37,5 +37,5 @@ Some constants defined at the top of the script can be tweaked to suit your part
 * _kLeakageDwellTime_seconds_ sets the time that the instrument will wait for the current to settle to determine the leakage of the cell.
 
 # Handy links
-* (Keithley 2400-series user's manual, including SCPI programming)[https://download.tek.com/manual/2400S-900-01_K-Sep2011_User.pdf]
-* (PyVisa, for connecting to the instrument)[https://pyvisa.readthedocs.io/en/latest/]
+* [Keithley 2400-series user's manual, including SCPI programming](https://download.tek.com/manual/2400S-900-01_K-Sep2011_User.pdf)
+* [PyVisa, for connecting to the instrument](https://pyvisa.readthedocs.io/en/latest/)
