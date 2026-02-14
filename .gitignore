@@ -1,0 +1,17 @@
+# Avoid non-source LTspice files
+*.raw
+*.log
+
+# Avoid non-source Altium files
+*.LOG
+*.PrjPcbStructure
+**/History
+**/__Previews
+
+# Avoid junk data related to test builds
+/testing/arrangement/*.csv
+/testing/cell/results/*.csv
+/testing/cell/results/*.xlsx
+
+# Avoid manufacturer PDFs that may invite crankiness
+**/documentation/*/*.pdf
