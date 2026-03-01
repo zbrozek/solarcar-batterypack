@@ -52,7 +52,7 @@ PrefsRevisionGUID=
 
 [Document1]
 DocumentPath=conn_sdcard.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -69,7 +69,7 @@ DocumentUniqueId=GGAUYCXI
 
 [Document2]
 DocumentPath=mcu_stm32f4.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -86,7 +86,7 @@ DocumentUniqueId=TKDJPPVL
 
 [Document3]
 DocumentPath=top.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -188,7 +188,7 @@ DocumentUniqueId=EUECGJGS
 
 [Document9]
 DocumentPath=adc_mcp3913.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -197,7 +197,7 @@ AnnotateOrder=29
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
@@ -205,7 +205,7 @@ DocumentUniqueId=CWOWNESJ
 
 [Document10]
 DocumentPath=hv_architecture.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -256,7 +256,7 @@ DocumentUniqueId=
 
 [Document13]
 DocumentPath=eth_100base-tx_magnetics.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -265,7 +265,7 @@ AnnotateOrder=33
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
@@ -273,7 +273,7 @@ DocumentUniqueId=CQHVFTDE
 
 [Document14]
 DocumentPath=bridge_bq79600.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -290,7 +290,7 @@ DocumentUniqueId=GUDJQUJE
 
 [Document15]
 DocumentPath=filter_diff_shunt.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -299,7 +299,7 @@ AnnotateOrder=35
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
@@ -307,7 +307,7 @@ DocumentUniqueId=HGLXXIKK
 
 [Document16]
 DocumentPath=conn_usbc.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -324,7 +324,7 @@ DocumentUniqueId=EOHQNPOK
 
 [Document17]
 DocumentPath=hv_bleed.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -358,7 +358,7 @@ DocumentUniqueId=VAXNDWDO
 
 [Document19]
 DocumentPath=current_mp6519.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -375,7 +375,7 @@ DocumentUniqueId=BEEGNWBW
 
 [Document20]
 DocumentPath=pmic_vicor_brick.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -392,7 +392,7 @@ DocumentUniqueId=EQKKOAPT
 
 [Document21]
 DocumentPath=can_tcan1462v.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -409,7 +409,7 @@ DocumentUniqueId=YKKAOVVI
 
 [Document22]
 DocumentPath=conn_harness_lv.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -426,7 +426,7 @@ DocumentUniqueId=XSPDRXMF
 
 [Document23]
 DocumentPath=eth_ksz8567r_switch.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -443,7 +443,7 @@ DocumentUniqueId=LVPECBJQ
 
 [Document24]
 DocumentPath=st-link-v2.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -460,7 +460,7 @@ DocumentUniqueId=JNJVSDSG
 
 [Document25]
 DocumentPath=analog_sensor_input.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -477,7 +477,7 @@ DocumentUniqueId=IVZJPKVQ
 
 [Document26]
 DocumentPath=switch_vn9e30f.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -486,7 +486,7 @@ AnnotateOrder=61
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
@@ -494,7 +494,7 @@ DocumentUniqueId=MUQDIYUF
 
 [Document27]
 DocumentPath=isolator_si8662.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -503,7 +503,7 @@ AnnotateOrder=62
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
@@ -511,7 +511,7 @@ DocumentUniqueId=BXGQBYTZ
 
 [Document28]
 DocumentPath=digital_input_protection.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -520,7 +520,7 @@ AnnotateOrder=65
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
@@ -528,7 +528,7 @@ DocumentUniqueId=OSQRXPBA
 
 [Document29]
 DocumentPath=usb_usb2534.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -545,7 +545,7 @@ DocumentUniqueId=QXOQGUHC
 
 [Document30]
 DocumentPath=pmic_tps79933.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -562,7 +562,7 @@ DocumentUniqueId=OKTBYORZ
 
 [Document31]
 DocumentPath=imu_ism330.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -579,7 +579,7 @@ DocumentUniqueId=MGBXDVCI
 
 [Document32]
 DocumentPath=conn_fan.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -588,7 +588,7 @@ AnnotateOrder=69
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
+ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
@@ -749,7 +749,7 @@ DocumentUniqueId=
 
 [Document42]
 DocumentPath=eth_10base-t1s_phy.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -817,7 +817,7 @@ DocumentUniqueId=
 
 [Document46]
 DocumentPath=dht_bme280.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -851,7 +851,7 @@ DocumentUniqueId=
 
 [Document48]
 DocumentPath=gnss_quectel_lc29hea.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -936,12 +936,12 @@ DocumentUniqueId=
 
 [Document53]
 DocumentPath=conn_isouart.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=73
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -953,6 +953,23 @@ DocumentUniqueId=JGORMWYM
 
 [Document54]
 DocumentPath=conn_isouart.Harness
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document55]
+DocumentPath=..\..\altium_library\database.DbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -2125,8 +2142,8 @@ UpdateToLatestRevision=1
 PartTypes=0
 ComponentLibIdentifierKind0=Library Name And Type
 ComponentLibraryIdentifier0=SSCP.IntLib
-ComponentDesignItemID0=SWITCH_CHS-04TA
-ComponentSymbolReference0=SWITCH_CHS-04TA
+ComponentDesignItemID0=TVS_UNI_30KPA120A
+ComponentSymbolReference0=TVS_UNI_30KPA120A
 ComponentUpdate0=1
 ComponentIsDeviceSheet0=0
 FullReplace=0
@@ -2142,34 +2159,40 @@ RemoveParameters=0
 AddModels=1
 RemoveModels=1
 UpdateCurrentModels=1
-ParameterName0=Comment
+ParameterName0=Clamping Voltage-Max
 ParameterUpdate0=1
-ParameterName1=Component Kind
+ParameterName1=Comment
 ParameterUpdate1=1
-ParameterName2=ComponentLink1Description
+ParameterName2=Component Kind
 ParameterUpdate2=1
-ParameterName3=ComponentLink1URL
+ParameterName3=ComponentLink1Description
 ParameterUpdate3=1
-ParameterName4=Description
+ParameterName4=ComponentLink1URL
 ParameterUpdate4=1
-ParameterName5=Library Reference
+ParameterName5=Description
 ParameterUpdate5=1
-ParameterName6=Manufacturer
+ParameterName6=Library Reference
 ParameterUpdate6=1
-ParameterName7=Manufacturer Part Number
+ParameterName7=Manufacturer
 ParameterUpdate7=1
-ParameterName8=Supplier 1
+ParameterName8=Manufacturer Part Number
 ParameterUpdate8=1
-ParameterName9=Supplier 2
+ParameterName9=Min Breakdown Voltage
 ParameterUpdate9=1
-ParameterName10=Supplier Part Number 1
+ParameterName10=Non-rep Peak Rev Power Dis-Max
 ParameterUpdate10=1
-ParameterName11=Supplier Part Number 2
+ParameterName11=Supplier 1
 ParameterUpdate11=1
+ParameterName12=Supplier 2
+ParameterUpdate12=1
+ParameterName13=Supplier Part Number 1
+ParameterUpdate13=1
+ParameterName14=Supplier Part Number 2
+ParameterUpdate14=1
 ModelTypeGroup0=PCBLIB
 ModelTypeUpdate0=1
 ModelType0=PCBLIB
-ModelName0=SWITCH_NIDEC_CHS-04TA
+ModelName0=P600
 ModelUpdate0=1
 
 [DatabaseUpdateOptions]
