@@ -19,25 +19,28 @@ LibrarySearchPath=
 OrcadMultiValueDelimiter=,
 SearchSubDirectories=0
 SchemaName=ALTIUM
-LastFocusedTable=resistors.csv
+LastFocusedTable=fb.csv
 [Table1]
 SchemaName=
 TableName=capacitors.csv
 Enabled=True
 UserWhere=1
-UserWhereText=
-BrowserOrder_Sorting=
-BrowserOrder_Grouping=
-BrowserOrder_Visible=Manufacturer Part Number0=280|Manufacturer0=334|SymbolName0=169|SymbolLibrary0=201|FootprintName0=156|FootprintLibrary0=215|Package0=103|Voltage Rating0=153|Dielectric0=110|Capacitance0=133|Supplier 10=116|Supplier Part Number 10=220|Supplier 20=116|Supplier Part Number 20=220|ComponentLink1Description0=256|ComponentLink1URL0=1136
+UserWhereText=[Manufacturer Part Number] = '{Manufacturer Part Number}'
 [Table2]
 SchemaName=
-TableName=resistors.csv
+TableName=fb.csv
 Enabled=True
 UserWhere=1
 UserWhereText=[Manufacturer Part Number] = '{Manufacturer Part Number}'
 BrowserOrder_Sorting=
 BrowserOrder_Grouping=
-BrowserOrder_Visible=Manufacturer Part Number0=310|Manufacturer0=328|SymbolName0=154|SymbolLibrary0=186|FootprintName0=156|FootprintLibrary0=200|Package0=103|Power Rating (mW)0=187|Value0=83|Tolerance0=114|Temperature Coefficient0=224|Supplier 10=116|Supplier Part Number 10=220|Supplier 20=116|Supplier Part Number 20=220|ComponentLink1Description0=256|ComponentLink1URL0=1075
+BrowserOrder_Visible=SymbolName0=142|SymbolLibrary0=195|FootprintName0=156|FootprintLibrary0=209|Z @ 100 MHz0=143|Current Rating (mA)0=193|Manufacturer Part Number0=247|Manufacturer0=328|Package0=103|DCR (mOhms)0=148|Supplier 10=116|Supplier Part Number 10=220|Supplier 20=116|Supplier Part Number 20=220|ComponentLink1Description0=256|ComponentLink1URL0=1088
+[Table3]
+SchemaName=
+TableName=resistors.csv
+Enabled=True
+UserWhere=1
+UserWhereText=[Manufacturer Part Number] = '{Manufacturer Part Number}'
 [FieldMap1]
 Options=FieldName=capacitors.csv.SymbolName|TableNameOnly=capacitors.csv|FieldNameOnly=SymbolName|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
 [FieldMap2]
@@ -49,12 +52,24 @@ Options=FieldName=capacitors.csv.FootprintLibrary|TableNameOnly=capacitors.csv|F
 [FieldMap5]
 Options=FieldName=capacitors.csv.Voltage Rating|TableNameOnly=capacitors.csv|FieldNameOnly=Voltage Rating|FieldType=1|ParameterName=Voltage Rating|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
 [FieldMap6]
-Options=FieldName=resistors.csv.SymbolName|TableNameOnly=resistors.csv|FieldNameOnly=SymbolName|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+Options=FieldName=capacitors.csv.Capacitance|TableNameOnly=capacitors.csv|FieldNameOnly=Capacitance|FieldType=1|ParameterName=Capacitance|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
 [FieldMap7]
-Options=FieldName=resistors.csv.SymbolLibrary|TableNameOnly=resistors.csv|FieldNameOnly=SymbolLibrary|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+Options=FieldName=fb.csv.SymbolName|TableNameOnly=fb.csv|FieldNameOnly=SymbolName|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
 [FieldMap8]
-Options=FieldName=resistors.csv.FootprintName|TableNameOnly=resistors.csv|FieldNameOnly=FootprintName|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+Options=FieldName=fb.csv.SymbolLibrary|TableNameOnly=fb.csv|FieldNameOnly=SymbolLibrary|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
 [FieldMap9]
-Options=FieldName=resistors.csv.FootprintLibrary|TableNameOnly=resistors.csv|FieldNameOnly=FootprintLibrary|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+Options=FieldName=fb.csv.FootprintName|TableNameOnly=fb.csv|FieldNameOnly=FootprintName|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
 [FieldMap10]
+Options=FieldName=fb.csv.FootprintLibrary|TableNameOnly=fb.csv|FieldNameOnly=FootprintLibrary|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap11]
+Options=FieldName=fb.csv.Current Rating (mA)|TableNameOnly=fb.csv|FieldNameOnly=Current Rating (mA)|FieldType=1|ParameterName=Current Rating (mA)|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap12]
+Options=FieldName=resistors.csv.SymbolName|TableNameOnly=resistors.csv|FieldNameOnly=SymbolName|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap13]
+Options=FieldName=resistors.csv.SymbolLibrary|TableNameOnly=resistors.csv|FieldNameOnly=SymbolLibrary|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap14]
+Options=FieldName=resistors.csv.FootprintName|TableNameOnly=resistors.csv|FieldNameOnly=FootprintName|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap15]
+Options=FieldName=resistors.csv.FootprintLibrary|TableNameOnly=resistors.csv|FieldNameOnly=FootprintLibrary|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap16]
 Options=FieldName=resistors.csv.Value|TableNameOnly=resistors.csv|FieldNameOnly=Value|FieldType=1|ParameterName=Value|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
