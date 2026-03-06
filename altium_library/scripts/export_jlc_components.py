@@ -151,6 +151,7 @@ def main():
     STANDARD_RESISTOR_PACKAGES = {"0201", "0402", "0603", "0805", "1206", "1210", "1812", "2010", "2512", "4527"}
     STANDARD_CAPACITOR_PACKAGES = {"0201", "0402", "0603", "0805", "1206", "1210", "1812", "2220"}
     STANDARD_FB_PACKAGES = {"0402", "0603", "0805", "1206", "1210", "1806", "1812", "2020", "2220"}
+    STANDARD_FUSE_PACKAGES = {"2920", "2512", "2410", "2220", "1812", "1210", "1206", "0805", "0603", "0402"}
 
     # --- Resistors ---
     print("Processing Resistors...")
@@ -195,7 +196,7 @@ def main():
                 if not is_basic:
                     continue
                 
-            package = extra.get('package', row['package'])
+            package = row['package']
             if package not in STANDARD_RESISTOR_PACKAGES:
                 continue
                 
@@ -298,7 +299,7 @@ def main():
             if not dielectric or dielectric.strip().lower() in ('null', 'none', '-', 'unspecified', ''):
                 continue
                 
-            package = extra.get('package', row['package'])
+            package = row['package']
             if package not in STANDARD_CAPACITOR_PACKAGES:
                 continue
                 
@@ -399,7 +400,7 @@ def main():
             if imp_val is None or dcr_val is None or current_val is None:
                 continue
             
-            package = extra.get('package', row['package'])
+            package = row['package']
             if package not in STANDARD_FB_PACKAGES:
                 continue
                 
@@ -475,6 +476,113 @@ def main():
             ])
 
     print(f"Exported {len(fbs)} ferrite beads to fb.csv")
+
+    # --- Surface Mount Fuses ---
+    print("Processing Surface Mount Fuses...")
+    cursor.execute("""
+        SELECT c.extra, m.name as manufacturer_name, c.package, c.lcsc as lcsc_number, c.stock, c.datasheet, c.basic
+        FROM components c
+        JOIN categories cat ON c.category_id = cat.id
+        LEFT JOIN manufacturers m ON c.manufacturer_id = m.id
+        WHERE cat.subcategory LIKE '%Fuse%'
+          AND c.extra != '{}'
+    """)
+    
+    fuses_dict = {}
+    for row in cursor:
+        try:
+            extra = json.loads(row['extra'])
+            attrs = extra.get('attributes', {})
+            
+            # AC and DC voltages often have multiple spaces or different keys, so we check carefully
+            dc_vol_str = attrs.get('Voltage Rating (DC)') or attrs.get('Operating Voltage (Max)') or ''
+            ac_vol_str = attrs.get('Voltage Rating  (AC)') or attrs.get('Voltage Rating (AC)') or ''
+            current_str = attrs.get('Current Rating') or attrs.get('Hold Current') or ''
+            
+            dc_vol = parse_voltage(dc_vol_str)
+            ac_vol = parse_voltage(ac_vol_str)
+            current_ma = parse_current_ma(current_str)
+            
+            if current_ma is None:
+                continue
+            
+            package = row['package']
+            if package not in STANDARD_FUSE_PACKAGES:
+                continue
+                
+            datasheet = extra.get('datasheet', {}).get('pdf', row['datasheet'])
+            if not datasheet:
+                continue
+                
+            mpn = extra.get('mpn', '')
+            lcsc_pn = extra.get('number', f"C{row['lcsc_number']}")
+            stock = row['stock']
+            is_basic = bool(row['basic'])
+            
+            if stock <= 10 and not is_basic:
+                continue
+            
+            item = {
+                'mpn': mpn,
+                'manufacturer': row['manufacturer_name'] or '',
+                'footprint': f"FUSE{package}",
+                'package': package,
+                'dc_voltage': dc_vol,
+                'ac_voltage': ac_vol,
+                'current_ma': current_ma,
+                'datasheet': datasheet,
+                'lcsc': lcsc_pn,
+                'stock': stock,
+                'is_basic': is_basic
+            }
+            
+            # Dedup: prioritize basic parts, then highest stock for identical (package, dc_voltage, current)
+            key = (package, dc_vol, current_ma)
+            if key not in fuses_dict:
+                fuses_dict[key] = item
+            else:
+                existing = fuses_dict[key]
+                if (is_basic, stock) > (existing['is_basic'], existing['stock']):
+                    fuses_dict[key] = item
+                    
+        except Exception as e:
+            continue
+            
+    fuses = list(fuses_dict.values())
+    # Sort: DC voltage -> package -> current rating
+    fuses.sort(key=lambda x: (x['dc_voltage'] if x['dc_voltage'] is not None else -1, x['package'], x['current_ma']))
+    
+    with open('fuses.csv', 'w', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
+        writer.writerow([
+            'Manufacturer Part Number', 'Manufacturer', 'SymbolName', 'SymbolLibrary', 
+            'FootprintName', 'FootprintLibrary', 'Package', 'DC Voltage Rating (V)', 'AC Voltage Rating (V)', 
+            'Current Rating (mA)', 'Supplier 1', 'Supplier Part Number 1', 'Supplier 2', 'Supplier Part Number 2', 
+            'ComponentLink1Description', 'ComponentLink1URL'
+        ])
+        for c in fuses:
+            dc_val = f"{c['dc_voltage']:g}" if c['dc_voltage'] is not None else ""
+            ac_val = f"{c['ac_voltage']:g}" if c['ac_voltage'] is not None else ""
+            writer.writerow([
+                sanitize_string(c['mpn']),
+                sanitize_string(c['manufacturer']),
+                '__template_fuse',
+                'symbols/fuse.SchLib',
+                sanitize_string(c['footprint']),
+                'footprints/fuse.PcbLib',
+                sanitize_string(c['package']),
+                dc_val,
+                ac_val,
+                f"{c['current_ma']:g}",
+                '',
+                '',
+                'LCSC',
+                sanitize_string(c['lcsc']),
+                'Datasheet',
+                sanitize_string(c['datasheet'])
+            ])
+
+    print(f"Exported {len(fuses)} fuses to fuses.csv")
 
 if __name__ == "__main__":
     main()
