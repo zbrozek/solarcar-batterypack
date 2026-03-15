@@ -18,4 +18,4 @@
 
 # Avoid downloaded parts libraries
 *.sqlite3
-*.z*
+/scripts/**.z*
