@@ -1,0 +1,4 @@
+"Manufacturer Part Number","Manufacturer","SymbolName","SymbolLibrary","FootprintName","FootprintLibrary","Supplier 1","Supplier Part Number 1","Supplier 2","Supplier Part Number 2","ComponentLink1Description","ComponentLink1URL"
+"RH-5000","ronghe","__template_testpoint","symbols/test.SchLib","TP_RH-5000","footprints/ronghe/rh-5000.PcbLib","","","LCSC","C5277086","Datasheet","https://datasheet.lcsc.com/lcsc/2307040929_ronghe-RH-5000_C5277086.pdf"
+"RH-5001","ronghe","__template_testpoint","symbols/test.SchLib","TP_RH-5001","footprints/ronghe/rh-5001.PcbLib","","","LCSC","C5199801","Datasheet","https://datasheet.lcsc.com/lcsc/2307040929_ronghe-RH-5000_C5277086.pdf"
+"RH-5002","ronghe","__template_testpoint","symbols/test.SchLib","TP_RH-5002","footprints/ronghe/rh-5002.PcbLib","","","LCSC","C5199802","Datasheet","https://datasheet.lcsc.com/lcsc/2307040929_ronghe-RH-5000_C5277086.pdf"
