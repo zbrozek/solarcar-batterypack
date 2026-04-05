@@ -6,6 +6,7 @@
 *.LOG
 *.PrjPcbStructure
 **/History
+**/outputs
 **/__Previews
 
 # Avoid junk data related to test builds
