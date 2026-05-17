@@ -1,0 +1,2 @@
+CC=CC1,CC2
+DIFF=_P,_N
