@@ -328,10 +328,10 @@ Description=0
 AllowFabrication=0
 ParameterCount=0
 VariationCount=5
-Variation1=Designator=R12B|UniqueId=\BASVEFRG\DEDKIZDX|Kind=1|AlternatePart=
-Variation2=Designator=R13B|UniqueId=\BASVEFRG\JFWGRRJI|Kind=1|AlternatePart=
-Variation3=Designator=C34A|UniqueId=\PBMGDKUC\JJVEOYNG|Kind=1|AlternatePart=
-Variation4=Designator=C35A|UniqueId=\PBMGDKUC\ZJDTOISH|Kind=1|AlternatePart=
+Variation1=Designator=R12B|UniqueId=\BASVEFRG\DEDKIZDX|Kind=0|AlternatePart=
+Variation2=Designator=R13B|UniqueId=\BASVEFRG\JFWGRRJI|Kind=0|AlternatePart=
+Variation3=Designator=C34A|UniqueId=\PBMGDKUC\JJVEOYNG|Kind=0|AlternatePart=
+Variation4=Designator=C35A|UniqueId=\PBMGDKUC\ZJDTOISH|Kind=0|AlternatePart=
 Variation5=Designator=R8B|UniqueId=\RGCYMOMK\MXWWNJVM|Kind=2|AlternatePart=="Manufacturer Part Number"|AltLibLink_LibIdentifierKind=Library Full Path|AltLibLink_LibraryIdentifier=D:\zbrozek-git\solarcar-batterypack\altium_library\database.DbLib/resistors.csv|AltLibLink_SymbolReference=|AltLibLink_DesignItemID=FRC0402F4532TS|AltLibLink_UseLibraryName=True|AltLibLink_SourceLibraryName=database.DbLib|AltLibLink_UseDBTableName=True|AltLibLink_DatabaseTableName=resistors.csv|AltLibLink_VaultGUID=|AltLibLink_ItemGUID=|AltLibLink_RevisionGUID=|AltLibLink_Footprint=R0402|AltLibLink_IsSameFootprint=True
 ParamVariation1=ParameterName=Comment|VariantValue=="Manufacturer Part Number"
 ParamDesignator1=R8B
@@ -551,7 +551,7 @@ SCH_ExpandPorts=-1
 SCH_ExpandSheetNumber=-1
 SCH_ExpandDocumentNumber=-1
 SCH_HasExpandLogicalToPhysicalSheets=-1
-SaveSettingsToOutJob=-1
+SaveSettingsToOutJob=0
 Esd_PrintColor=0
 
 [OutputGroup1]
