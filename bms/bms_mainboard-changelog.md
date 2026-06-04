@@ -1,11 +1,10 @@
 ## Changes to consider for 1.x to 2.0
 * Add e-paper interface for status indication.
 * Migrate to STM32H563LI or STM32H573LI for lower power consumption.
+* Use hotswap controller instead of diode on DC/DC output.
 
 ## Changes to consider for 1.0 --> 1.1
 * Put four-wire fan headers directly on the motherboard.
-* Use hotswap controller instead of diode on DC/DC output.
-* Switch to 15 volt Vicor for DC/DC.
 * Reduce slip fit to press fit on Wurth M4 terminals.
 * Change 24 MHz crystal BOM item and matching capacitors due to stocking.
 * Add 1M resistor across USB2534 oscillator pads.
@@ -20,3 +19,5 @@
 * Removed 33 ohm series resistors on USB-C connector.
 * Added LED to HV_nBLEED signal.
 * Added pull-up to SCL in case future chips do clock stretching.
+* Moved isoUART to COMH on BQ79600.
+* Switched to 15 volt Vicor for DC/DC.
