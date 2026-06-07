@@ -16,6 +16,6 @@
 * Moved isoUART to COMH on BQ79600.
 * Switched to 15 volt Vicor for DC/DC.
 * Used 3P3 for MP6519 EN pull-up because EN gates VCC regulator.
-* Plumbed GNSS receiver wake line.
+* Connected GNSS receiver wake line.
 * Removed blocking diode and pull up resistor on GNSS nRST.
 * Reduced slip fit to press fit on Wurth M4 terminals.
