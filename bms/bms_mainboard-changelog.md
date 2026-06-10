@@ -16,6 +16,11 @@
 * Moved isoUART to COMH on BQ79600.
 * Switched to 15 volt Vicor for DC/DC.
 * Used 3P3 for MP6519 EN pull-up because EN gates VCC regulator.
-* Plumbed GNSS receiver wake line.
+* Connected GNSS receiver wake line.
 * Removed blocking diode and pull up resistor on GNSS nRST.
 * Reduced slip fit to press fit on Wurth M4 terminals.
+* Updated BOM to switch from MCP3913 to MCP3913B.
+* Eliminated "shunt filter" on voltage sense channel.
+* Harmonized -3dB corner for voltage and current sensing.
+* Nudged MP6519 circuits to avoid contactor fill ports.
+* Added switched and buffered LVB divider to STM32 ADC input on PC0, ADCx_IN10.
