@@ -25,3 +25,4 @@
 * Nudged MP6519 circuits to avoid contactor fill ports.
 * Added switched and buffered LVB divider to STM32 ADC input on PC0, ADCx_IN10.
 * Changed PPS LED to red due to low VIO rail on LC29HEU GNSS receiver.
+* Added PPS test point.
