@@ -26,3 +26,7 @@
 * Added switched and buffered LVB divider to STM32 ADC input on PC0, ADCx_IN10.
 * Changed PPS LED to red due to low VIO rail on LC29HEU GNSS receiver.
 * Added PPS test point.
+* Reversed DIP switch net numbering to match printed label on DIP switch.
+* Adjusted RGB LED resistors to get better color intensity matching.
+* Fix LED4_1 and LED3_1 polarity on Ethernet switch.
+* Add a reverse-polarity fuse-blowing schottky diode to LVB/GND.
