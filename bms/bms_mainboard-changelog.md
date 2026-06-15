@@ -30,4 +30,6 @@
 * Adjusted RGB LED resistors to get better color intensity matching.
 * Fixed LED4_1 and LED3_1 polarity on Ethernet switch.
 * Added a reverse-polarity fuse-blowing schottky diode to LVB/GND.
-* Added a bidirectional level shifter to the onboard SWD and debug UART buses.
+* Added bus switch to onboard SWD and debug buses to avoid STM32F1 backfeed.
+
+* Use buffered reference for VDDA and VREF+ on STM32.
