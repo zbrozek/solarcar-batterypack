@@ -31,5 +31,7 @@
 * Fixed LED4_1 and LED3_1 polarity on Ethernet switch.
 * Added a reverse-polarity fuse-blowing schottky diode to LVB/GND.
 * Added bus switch to onboard SWD and debug buses to avoid STM32F1 backfeed.
+* Changed HV BLEED resistor to 1k to reduce NC SSR self-heating.
 
 * Use buffered reference for VDDA and VREF+ on STM32.
+
