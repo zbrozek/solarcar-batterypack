@@ -14,9 +14,6 @@
 /testing/cell/results/*.csv
 /testing/cell/results/*.xlsx
 
-# Avoid manufacturer PDFs that may invite crankiness
-**/documentation/*/*.pdf
-
 # Avoid downloaded parts libraries
 *.sqlite3
 /scripts/**.z*
