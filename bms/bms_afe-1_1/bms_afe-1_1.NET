@@ -1,0 +1,955 @@
+Wire List
+
+<<< Component List >>>
+CL10B474KA8NNNC                 C1             C0603
+CL10B474KA8NNNC                 C2             C0603
+CL10B474KA8NNNC                 C3             C0603
+CL10B474KA8NNNC                 C4             C0603
+CL10B474KA8NNNC                 C5             C0603
+CL10B474KA8NNNC                 C6             C0603
+CL10B474KA8NNNC                 C7             C0603
+CL10B474KA8NNNC                 C8             C0603
+CL10B474KA8NNNC                 C9             C0603
+CL10B474KA8NNNC                 C10            C0603
+CL10B474KA8NNNC                 C11            C0603
+CL10B474KA8NNNC                 C12            C0603
+CL10B474KA8NNNC                 C13            C0603
+CL10B474KA8NNNC                 C14            C0603
+CL10B474KA8NNNC                 C15            C0603
+CL10B474KA8NNNC                 C16            C0603
+CL10B474KA8NNNC                 C17            C0603
+CL10B105KA8NNNC                 C18            C0603
+CL10B474KA8NNNC                 C19            C0603
+CL10B474KA8NNNC                 C20            C0603
+CL10B474KA8NNNC                 C21            C0603
+CL10B474KA8NNNC                 C22            C0603
+CL10B474KA8NNNC                 C23            C0603
+CL10B474KA8NNNC                 C24            C0603
+CL10B474KA8NNNC                 C25            C0603
+CL10B474KA8NNNC                 C26            C0603
+CL10B474KA8NNNC                 C27            C0603
+CL10B474KA8NNNC                 C28            C0603
+CL10B474KA8NNNC                 C29            C0603
+CL10B474KA8NNNC                 C30            C0603
+TCC1206X7R224K101FT             C31            C1206
+CC0402KRX7R0BB103               C32            C0402
+CL10B474KA8NNNC                 C33            C0603
+CL05B104KB54PNC                 C34            C0402
+CL10B474KA8NNNC                 C35            C0603
+CL10B105KA8NNNC                 C36            C0603
+CL10B474KA8NNNC                 C37            C0603
+CL10B474KA8NNNC                 C38            C0603
+CL10B105KA8NNNC                 C39            C0603
+CL10B105KA8NNNC                 C40            C0603
+CL05B104KB54PNC                 C41            C0402
+CL10B474KA8NNNC                 C42            C0603
+CL21B475KOFNNNE                 C43            C0805
+CL10B474KA8NNNC                 C44            C0603
+CL05B104KB54PNC                 C45A           C0402
+CL05B104KB54PNC                 C45B           C0402
+0402YA101JAT2A                  C48A           C0402
+0402YA101JAT2A                  C48B           C0402
+0402YA101JAT2A                  C49A           C0402
+0402YA101JAT2A                  C49B           C0402
+LTST-C190KRKT                   D1             LED_0603P_RED
+LTST-C190KRKT                   D2             LED_0603P_RED
+LTST-C190KRKT                   D3             LED_0603P_RED
+LTST-C190KRKT                   D4             LED_0603P_RED
+LTST-C190KRKT                   D5             LED_0603P_RED
+LTST-C190KRKT                   D6             LED_0603P_RED
+LTST-C190KRKT                   D7             LED_0603P_RED
+LTST-C190KRKT                   D8             LED_0603P_RED
+LTST-C190KRKT                   D9             LED_0603P_RED
+LTST-C190KRKT                   D10            LED_0603P_RED
+LTST-C190KRKT                   D11            LED_0603P_RED
+LTST-C190KRKT                   D12            LED_0603P_RED
+LTST-C190KRKT                   D13            LED_0603P_RED
+LTST-C190KRKT                   D14            LED_0603P_RED
+LTST-C190KRKT                   D15            LED_0603P_RED
+LTST-C190KRKT                   D16            LED_0603P_RED
+PESD2USB3UX                     D17A           3SOT23
+PESD2USB3UX                     D17B           3SOT23
+JFC2410-0500TS                  F1             JDTFUSE_JFC2410
+JFC2410-0500TS                  F2             JDTFUSE_JFC2410
+JFC2410-0500TS                  F3             JDTFUSE_JFC2410
+JFC2410-0500TS                  F4             JDTFUSE_JFC2410
+JFC2410-0500TS                  F5             JDTFUSE_JFC2410
+JFC2410-0500TS                  F6             JDTFUSE_JFC2410
+JFC2410-0500TS                  F7             JDTFUSE_JFC2410
+JFC2410-0500TS                  F8             JDTFUSE_JFC2410
+JFC2410-0500TS                  F9             JDTFUSE_JFC2410
+JFC2410-0500TS                  F10            JDTFUSE_JFC2410
+JFC2410-0500TS                  F11            JDTFUSE_JFC2410
+JFC2410-0500TS                  F12            JDTFUSE_JFC2410
+JFC2410-0500TS                  F13            JDTFUSE_JFC2410
+JFC2410-0500TS                  F14            JDTFUSE_JFC2410
+JFC2410-0500TS                  F15            JDTFUSE_JFC2410
+JFC2410-0500TS                  F16            JDTFUSE_JFC2410
+JFC2410-0500TS                  F17            JDTFUSE_JFC2410
+JFC2410-0500TS                  F18            JDTFUSE_JFC2410
+JFC2410-0500TS                  F19            JDTFUSE_JFC2410
+2005280040                      J1             MOLEX_FD19_1.00mm_2005280040
+2005280040                      J2             MOLEX_FD19_1.00mm_2005280040
+2005280040                      J3             MOLEX_FD19_1.00mm_2005280040
+2005280040                      J4             MOLEX_FD19_1.00mm_2005280040
+2005280040                      J5             MOLEX_FD19_1.00mm_2005280040
+2005280040                      J6             MOLEX_FD19_1.00mm_2005280040
+2005280040                      J7             MOLEX_FD19_1.00mm_2005280040
+2005280040                      J8             MOLEX_FD19_1.00mm_2005280040
+43650-0204                      J9A            MOLEX_MICROFIT_0436500204
+43650-0204                      J9B            MOLEX_MICROFIT_0436500204
+HOLE                            MH1            HOLE_M2
+HOLE                            MH2            HOLE_M2
+HOLE                            MH3            HOLE_M2
+HOLE                            MH4            HOLE_M2
+HOLE                            MH5            HOLE_M2
+HOLE                            MH6            HOLE_M2
+HOLE                            MH7            HOLE_M2
+HOLE                            MH8            HOLE_M2
+HOLE                            MH9            HOLE_M2
+HOLE                            MH10           HOLE_M2
+HOLE                            MH11           HOLE_M2
+HOLE                            MH12           HOLE_M2
+HOLE                            MH13           HOLE_M2
+HOLE                            MH14           HOLE_M2
+HOLE                            MH15           HOLE_M2
+HOLE                            MH16           HOLE_M2
+HOLE                            MH17           HOLE_M2
+HOLE                            MH18           HOLE_M2
+HOLE                            MH19           HOLE_M2
+HOLE                            MH20           HOLE_M2
+HOLE                            MH21           HOLE_M2
+HOLE                            MH22           HOLE_M2
+HOLE                            MH23           HOLE_M2
+HOLE                            MH24           HOLE_M2
+HOLE                            MH25           HOLE_M2
+HOLE                            MH26           HOLE_M2
+HOLE                            MH27           HOLE_M2
+HOLE                            MH28           HOLE_M2
+HOLE                            MH29           HOLE_M2
+HOLE                            MH30           HOLE_M2
+HOLE                            MH31           HOLE_M2
+HOLE                            MH32           HOLE_M2
+NSV1C201MZ4T1G                  Q1             4SOT223
+RC0402FR-07100RL                R1             R0402
+0402WGF1001TCE                  R2             R0402
+RC2512FK-0730RL                 R3             R2512
+RC2512FK-0730RL                 R4             R2512
+RC0402FR-07100RL                R5             R0402
+0402WGF1001TCE                  R6             R0402
+RC2512FK-0730RL                 R7             R2512
+RC2512FK-0730RL                 R8             R2512
+RC0402FR-07100RL                R9             R0402
+0402WGF1001TCE                  R10            R0402
+RC2512FK-0730RL                 R11            R2512
+RC2512FK-0730RL                 R12            R2512
+RC0402FR-07100RL                R13            R0402
+0402WGF1001TCE                  R14            R0402
+RC2512FK-0730RL                 R15            R2512
+RC2512FK-0730RL                 R16            R2512
+RC0402FR-07100RL                R17            R0402
+0402WGF1001TCE                  R18            R0402
+RC2512FK-0730RL                 R19            R2512
+RC2512FK-0730RL                 R20            R2512
+RC0402FR-07100RL                R21            R0402
+0402WGF1001TCE                  R22            R0402
+RC2512FK-0730RL                 R23            R2512
+RC2512FK-0730RL                 R24            R2512
+RC0402FR-07100RL                R25            R0402
+0402WGF1001TCE                  R26            R0402
+RC2512FK-0730RL                 R27            R2512
+RC2512FK-0730RL                 R28            R2512
+RC0402FR-07100RL                R29            R0402
+0402WGF1001TCE                  R30            R0402
+RC2512FK-0730RL                 R31            R2512
+RC2512FK-0730RL                 R32            R2512
+RC0402FR-07100RL                R33            R0402
+0402WGF1001TCE                  R34            R0402
+0402WGF1002TCE                  R35            R0402
+0402WGF1002TCE                  R36            R0402
+0402WGF1002TCE                  R37            R0402
+0402WGF1002TCE                  R38            R0402
+RC2512FK-0730RL                 R39            R2512
+0402WGF1002TCE                  R40            R0402
+0402WGF1002TCE                  R41            R0402
+0402WGF1002TCE                  R42            R0402
+0402WGF1002TCE                  R43            R0402
+RC2512FK-0730RL                 R44            R2512
+RC0402FR-07100RL                R45            R0402
+0402WGF1001TCE                  R46            R0402
+RC2512FK-0730RL                 R47            R2512
+RC2512FK-0730RL                 R48            R2512
+RC0402FR-07100RL                R49            R0402
+0402WGF1001TCE                  R50            R0402
+RC2512FK-0730RL                 R51            R2512
+RC2512FK-0730RL                 R52            R2512
+RC0402FR-07100RL                R53            R0402
+0402WGF1001TCE                  R54            R0402
+RC2512FK-0730RL                 R55            R2512
+RC2512FK-0730RL                 R56            R2512
+RC0402FR-07100RL                R57            R0402
+0402WGF1001TCE                  R58            R0402
+RC2512FK-0730RL                 R59            R2512
+RC2512FK-0730RL                 R60            R2512
+RC0402FR-07100RL                R61            R0402
+0402WGF1001TCE                  R62            R0402
+RC0402FR-07100RL                R63            R0402
+RC0402FR-07100RL                R64            R0402
+RC0402FR-07100RL                R65            R0402
+RC2512FK-0730RL                 R66            R2512
+RC0402FR-0730RL                 R67            R0402
+RC2512FK-0730RL                 R68            R2512
+RC0402FR-07100RL                R69            R0402
+0402WGF1001TCE                  R70            R0402
+RC2512FK-0730RL                 R71            R2512
+RC2512FK-0730RL                 R72            R2512
+RC0402FR-07100RL                R73            R0402
+0402WGF1001TCE                  R74            R0402
+RC2512FK-0730RL                 R75            R2512
+RC2512FK-0730RL                 R76            R2512
+RC0402FR-07100RL                R77            R0402
+RC2512FK-0730RL                 R78            R2512
+RC2512FK-0730RL                 R79            R2512
+0402WGF499JTCE                  R80A           R0402
+0402WGF499JTCE                  R80B           R0402
+HP03W5F1001T5E                  R81A           R0603
+HP03W5F1001T5E                  R81B           R0603
+0402WGF499JTCE                  R82A           R0402
+0402WGF499JTCE                  R82B           R0402
+SM91502ALA-E                    T1A            BOURNS_SM91502
+SM91502ALA-E                    T1B            BOURNS_SM91502
+BQ79616PAPRQ1                   U1             TI_PAP0064F
+
+<<< Wire List >>>
+
+  NODE  REFERENCE  PIN #   PIN NAME       PIN TYPE    PART VALUE
+
+[00146] VC16
+        C1         1                      PASSIVE     CL10B474KA8NNNC
+        R1         2                      PASSIVE     RC0402FR-07100RL
+        U1         3       VC16           PASSIVE     BQ79616PAPRQ1
+
+[00145] VC15
+        C1         2                      PASSIVE     CL10B474KA8NNNC
+        C3         1                      PASSIVE     CL10B474KA8NNNC
+        R5         2                      PASSIVE     RC0402FR-07100RL
+        U1         5       VC15           PASSIVE     BQ79616PAPRQ1
+
+[00144] VC14
+        C3         2                      PASSIVE     CL10B474KA8NNNC
+        C5         1                      PASSIVE     CL10B474KA8NNNC
+        R9         2                      PASSIVE     RC0402FR-07100RL
+        U1         7       VC14           PASSIVE     BQ79616PAPRQ1
+
+[00143] VC13
+        C5         2                      PASSIVE     CL10B474KA8NNNC
+        C7         1                      PASSIVE     CL10B474KA8NNNC
+        R13        2                      PASSIVE     RC0402FR-07100RL
+        U1         9       VC13           PASSIVE     BQ79616PAPRQ1
+
+[00142] VC12
+        C7         2                      PASSIVE     CL10B474KA8NNNC
+        C9         1                      PASSIVE     CL10B474KA8NNNC
+        R17        2                      PASSIVE     RC0402FR-07100RL
+        U1         11      VC12           PASSIVE     BQ79616PAPRQ1
+
+[00141] VC11
+        C9         2                      PASSIVE     CL10B474KA8NNNC
+        C11        1                      PASSIVE     CL10B474KA8NNNC
+        R21        2                      PASSIVE     RC0402FR-07100RL
+        U1         13      VC11           PASSIVE     BQ79616PAPRQ1
+
+[00140] VC10
+        C11        2                      PASSIVE     CL10B474KA8NNNC
+        C13        1                      PASSIVE     CL10B474KA8NNNC
+        R25        2                      PASSIVE     RC0402FR-07100RL
+        U1         15      VC10           PASSIVE     BQ79616PAPRQ1
+
+[00139] VC9
+        C13        2                      PASSIVE     CL10B474KA8NNNC
+        C15        1                      PASSIVE     CL10B474KA8NNNC
+        R29        2                      PASSIVE     RC0402FR-07100RL
+        U1         17      VC9            PASSIVE     BQ79616PAPRQ1
+
+[00138] VC8
+        C15        2                      PASSIVE     CL10B474KA8NNNC
+        C17        1                      PASSIVE     CL10B474KA8NNNC
+        R33        2                      PASSIVE     RC0402FR-07100RL
+        U1         19      VC8            PASSIVE     BQ79616PAPRQ1
+
+[00137] VC7
+        C17        2                      PASSIVE     CL10B474KA8NNNC
+        C20        1                      PASSIVE     CL10B474KA8NNNC
+        R45        2                      PASSIVE     RC0402FR-07100RL
+        U1         21      VC7            PASSIVE     BQ79616PAPRQ1
+
+[00136] VC6
+        C20        2                      PASSIVE     CL10B474KA8NNNC
+        C22        1                      PASSIVE     CL10B474KA8NNNC
+        R49        2                      PASSIVE     RC0402FR-07100RL
+        U1         23      VC6            PASSIVE     BQ79616PAPRQ1
+
+[00135] VC5
+        C22        2                      PASSIVE     CL10B474KA8NNNC
+        C24        1                      PASSIVE     CL10B474KA8NNNC
+        R53        2                      PASSIVE     RC0402FR-07100RL
+        U1         25      VC5            PASSIVE     BQ79616PAPRQ1
+
+[00134] VC4
+        C24        2                      PASSIVE     CL10B474KA8NNNC
+        C26        1                      PASSIVE     CL10B474KA8NNNC
+        R57        2                      PASSIVE     RC0402FR-07100RL
+        U1         27      VC4            PASSIVE     BQ79616PAPRQ1
+
+[00133] VC3
+        C26        2                      PASSIVE     CL10B474KA8NNNC
+        C28        1                      PASSIVE     CL10B474KA8NNNC
+        R61        2                      PASSIVE     RC0402FR-07100RL
+        U1         29      VC3            PASSIVE     BQ79616PAPRQ1
+
+[00132] VC2
+        C28        2                      PASSIVE     CL10B474KA8NNNC
+        C33        1                      PASSIVE     CL10B474KA8NNNC
+        R69        2                      PASSIVE     RC0402FR-07100RL
+        U1         31      VC2            PASSIVE     BQ79616PAPRQ1
+
+[00131] VC1
+        C33        2                      PASSIVE     CL10B474KA8NNNC
+        C37        1                      PASSIVE     CL10B474KA8NNNC
+        R73        2                      PASSIVE     RC0402FR-07100RL
+        U1         33      VC1            PASSIVE     BQ79616PAPRQ1
+
+[00130] VC0
+        C37        2                      PASSIVE     CL10B474KA8NNNC
+        C42        1                      PASSIVE     CL10B474KA8NNNC
+        R77        2                      PASSIVE     RC0402FR-07100RL
+        U1         35      VC0            PASSIVE     BQ79616PAPRQ1
+
+[00129] TSREF
+        C18        1                      PASSIVE     CL10B105KA8NNNC
+        R35        1                      PASSIVE     0402WGF1002TCE
+        R36        1                      PASSIVE     0402WGF1002TCE
+        R37        1                      PASSIVE     0402WGF1002TCE
+        R38        1                      PASSIVE     0402WGF1002TCE
+        R40        1                      PASSIVE     0402WGF1002TCE
+        R41        1                      PASSIVE     0402WGF1002TCE
+        R42        1                      PASSIVE     0402WGF1002TCE
+        R43        1                      PASSIVE     0402WGF1002TCE
+        U1         51      TSREF          PASSIVE     BQ79616PAPRQ1
+
+[00128] REFHP
+        C36        1                      PASSIVE     CL10B105KA8NNNC
+        U1         37      REFHP          PASSIVE     BQ79616PAPRQ1
+
+[00127] NPNC
+        C31        1                      PASSIVE     TCC1206X7R224K101FT
+        Q1         2       C              PASSIVE     NSV1C201MZ4T1G
+        Q1         4       C              PASSIVE     NSV1C201MZ4T1G
+        R65        1                      PASSIVE     RC0402FR-07100RL
+
+[00126] NPNB
+        Q1         1       B              PASSIVE     NSV1C201MZ4T1G
+        U1         48      NPNB           PASSIVE     BQ79616PAPRQ1
+
+[00119] NetR64_1
+        R64        1                      PASSIVE     RC0402FR-07100RL
+        R65        2                      PASSIVE     RC0402FR-07100RL
+
+[00118] NetR63_1
+        R63        1                      PASSIVE     RC0402FR-07100RL
+        R64        2                      PASSIVE     RC0402FR-07100RL
+
+[00097] NetF1_2
+        F1         2                      PASSIVE     JFC2410-0500TS
+        R63        2                      PASSIVE     RC0402FR-07100RL
+        R67        1                      PASSIVE     RC0402FR-0730RL
+
+[00096] NetD17B_2
+        D17B       2                      PASSIVE     PESD2USB3UX
+        R80B       2                      PASSIVE     0402WGF499JTCE
+        T1B        1       1              PASSIVE     SM91502ALA-E
+
+[00095] NetD17B_1
+        D17B       1                      PASSIVE     PESD2USB3UX
+        R82B       2                      PASSIVE     0402WGF499JTCE
+        T1B        3       3              PASSIVE     SM91502ALA-E
+
+[00094] NetD17A_2
+        D17A       2                      PASSIVE     PESD2USB3UX
+        R80A       2                      PASSIVE     0402WGF499JTCE
+        T1A        1       1              PASSIVE     SM91502ALA-E
+
+[00093] NetD17A_1
+        D17A       1                      PASSIVE     PESD2USB3UX
+        R82A       2                      PASSIVE     0402WGF499JTCE
+        T1A        3       3              PASSIVE     SM91502ALA-E
+
+[00092] NetD16_2
+        D16        2                      PASSIVE     LTST-C190KRKT
+        R74        2                      PASSIVE     0402WGF1001TCE
+
+[00091] NetD15_2
+        D15        2                      PASSIVE     LTST-C190KRKT
+        R70        2                      PASSIVE     0402WGF1001TCE
+
+[00090] NetD14_2
+        D14        2                      PASSIVE     LTST-C190KRKT
+        R62        2                      PASSIVE     0402WGF1001TCE
+
+[00089] NetD13_2
+        D13        2                      PASSIVE     LTST-C190KRKT
+        R58        2                      PASSIVE     0402WGF1001TCE
+
+[00088] NetD12_2
+        D12        2                      PASSIVE     LTST-C190KRKT
+        R54        2                      PASSIVE     0402WGF1001TCE
+
+[00087] NetD11_2
+        D11        2                      PASSIVE     LTST-C190KRKT
+        R50        2                      PASSIVE     0402WGF1001TCE
+
+[00086] NetD10_2
+        D10        2                      PASSIVE     LTST-C190KRKT
+        R46        2                      PASSIVE     0402WGF1001TCE
+
+[00085] NetD9_2
+        D9         2                      PASSIVE     LTST-C190KRKT
+        R34        2                      PASSIVE     0402WGF1001TCE
+
+[00084] NetD8_2
+        D8         2                      PASSIVE     LTST-C190KRKT
+        R30        2                      PASSIVE     0402WGF1001TCE
+
+[00083] NetD7_2
+        D7         2                      PASSIVE     LTST-C190KRKT
+        R26        2                      PASSIVE     0402WGF1001TCE
+
+[00082] NetD6_2
+        D6         2                      PASSIVE     LTST-C190KRKT
+        R22        2                      PASSIVE     0402WGF1001TCE
+
+[00081] NetD5_2
+        D5         2                      PASSIVE     LTST-C190KRKT
+        R18        2                      PASSIVE     0402WGF1001TCE
+
+[00080] NetD4_2
+        D4         2                      PASSIVE     LTST-C190KRKT
+        R14        2                      PASSIVE     0402WGF1001TCE
+
+[00079] NetD3_2
+        D3         2                      PASSIVE     LTST-C190KRKT
+        R10        2                      PASSIVE     0402WGF1001TCE
+
+[00078] NetD2_2
+        D2         2                      PASSIVE     LTST-C190KRKT
+        R6         2                      PASSIVE     0402WGF1001TCE
+
+[00077] NetD1_2
+        D1         2                      PASSIVE     LTST-C190KRKT
+        R2         2                      PASSIVE     0402WGF1001TCE
+
+[00076] NetC45B_1
+        C45B       1                      PASSIVE     CL05B104KB54PNC
+        T1B        2       2              PASSIVE     SM91502ALA-E
+
+[00075] NetC45A_1
+        C45A       1                      PASSIVE     CL05B104KB54PNC
+        T1A        2       2              PASSIVE     SM91502ALA-E
+
+[00074] NEG5V
+        C41        1                      PASSIVE     CL05B104KB54PNC
+        U1         44      NEG5V          PASSIVE     BQ79616PAPRQ1
+
+[00073] LDOIN
+        C34        1                      PASSIVE     CL05B104KB54PNC
+        Q1         3       E              PASSIVE     NSV1C201MZ4T1G
+        U1         47      LDOIN          PASSIVE     BQ79616PAPRQ1
+
+[00072] GPIO8
+        J8         3                      PASSIVE     2005280040
+        J8         4                      PASSIVE     2005280040
+        R43        2                      PASSIVE     0402WGF1002TCE
+        U1         54      GPIO8          PASSIVE     BQ79616PAPRQ1
+
+[00071] GPIO7
+        J7         3                      PASSIVE     2005280040
+        J7         4                      PASSIVE     2005280040
+        R38        2                      PASSIVE     0402WGF1002TCE
+        U1         55      GPIO7          PASSIVE     BQ79616PAPRQ1
+
+[00070] GPIO6
+        J6         3                      PASSIVE     2005280040
+        J6         4                      PASSIVE     2005280040
+        R42        2                      PASSIVE     0402WGF1002TCE
+        U1         56      GPIO6          PASSIVE     BQ79616PAPRQ1
+
+[00069] GPIO5
+        J5         3                      PASSIVE     2005280040
+        J5         4                      PASSIVE     2005280040
+        R37        2                      PASSIVE     0402WGF1002TCE
+        U1         57      GPIO5          PASSIVE     BQ79616PAPRQ1
+
+[00068] GPIO4
+        J4         3                      PASSIVE     2005280040
+        J4         4                      PASSIVE     2005280040
+        R41        2                      PASSIVE     0402WGF1002TCE
+        U1         58      GPIO4          PASSIVE     BQ79616PAPRQ1
+
+[00067] GPIO3
+        J3         3                      PASSIVE     2005280040
+        J3         4                      PASSIVE     2005280040
+        R36        2                      PASSIVE     0402WGF1002TCE
+        U1         59      GPIO3          PASSIVE     BQ79616PAPRQ1
+
+[00066] GPIO2
+        J2         3                      PASSIVE     2005280040
+        J2         4                      PASSIVE     2005280040
+        R40        2                      PASSIVE     0402WGF1002TCE
+        U1         60      GPIO2          PASSIVE     BQ79616PAPRQ1
+
+[00065] GPIO1
+        J1         3                      PASSIVE     2005280040
+        J1         4                      PASSIVE     2005280040
+        R35        2                      PASSIVE     0402WGF1002TCE
+        U1         61      GPIO1          PASSIVE     BQ79616PAPRQ1
+
+[00064] GND
+        C18        2                      PASSIVE     CL10B105KA8NNNC
+        C31        2                      PASSIVE     TCC1206X7R224K101FT
+        C32        2                      PASSIVE     CC0402KRX7R0BB103
+        C34        2                      PASSIVE     CL05B104KB54PNC
+        C36        2                      PASSIVE     CL10B105KA8NNNC
+        C39        2                      PASSIVE     CL10B105KA8NNNC
+        C40        2                      PASSIVE     CL10B105KA8NNNC
+        C41        2                      PASSIVE     CL05B104KB54PNC
+        C42        2                      PASSIVE     CL10B474KA8NNNC
+        C43        2                      PASSIVE     CL21B475KOFNNNE
+        C44        2                      PASSIVE     CL10B474KA8NNNC
+        C45A       2                      PASSIVE     CL05B104KB54PNC
+        C45B       2                      PASSIVE     CL05B104KB54PNC
+        C48A       2                      PASSIVE     0402YA101JAT2A
+        C48B       2                      PASSIVE     0402YA101JAT2A
+        C49A       2                      PASSIVE     0402YA101JAT2A
+        C49B       2                      PASSIVE     0402YA101JAT2A
+        D17A       3                      PASSIVE     PESD2USB3UX
+        D17B       3                      PASSIVE     PESD2USB3UX
+        F19        2                      PASSIVE     JFC2410-0500TS
+        J1         1                      PASSIVE     2005280040
+        J1         2                      PASSIVE     2005280040
+        J2         1                      PASSIVE     2005280040
+        J2         2                      PASSIVE     2005280040
+        J3         1                      PASSIVE     2005280040
+        J3         2                      PASSIVE     2005280040
+        J4         1                      PASSIVE     2005280040
+        J4         2                      PASSIVE     2005280040
+        J5         1                      PASSIVE     2005280040
+        J5         2                      PASSIVE     2005280040
+        J6         1                      PASSIVE     2005280040
+        J6         2                      PASSIVE     2005280040
+        J7         1                      PASSIVE     2005280040
+        J7         2                      PASSIVE     2005280040
+        J8         1                      PASSIVE     2005280040
+        J8         2                      PASSIVE     2005280040
+        U1         36      REFHM          PASSIVE     BQ79616PAPRQ1
+        U1         39      AVSS           PASSIVE     BQ79616PAPRQ1
+        U1         46      CVSS           PASSIVE     BQ79616PAPRQ1
+        U1         50      DVSS           PASSIVE     BQ79616PAPRQ1
+        U1         EP0     PAD            PASSIVE     BQ79616PAPRQ1
+
+[00063] FUSED16
+        F2         2                      PASSIVE     JFC2410-0500TS
+        R1         1                      PASSIVE     RC0402FR-07100RL
+        R2         1                      PASSIVE     0402WGF1001TCE
+        R3         2                      PASSIVE     RC2512FK-0730RL
+        R4         1                      PASSIVE     RC2512FK-0730RL
+
+[00062] FUSED15
+        F3         2                      PASSIVE     JFC2410-0500TS
+        R5         1                      PASSIVE     RC0402FR-07100RL
+        R6         1                      PASSIVE     0402WGF1001TCE
+        R7         2                      PASSIVE     RC2512FK-0730RL
+        R8         1                      PASSIVE     RC2512FK-0730RL
+
+[00061] FUSED14
+        F4         2                      PASSIVE     JFC2410-0500TS
+        R9         1                      PASSIVE     RC0402FR-07100RL
+        R10        1                      PASSIVE     0402WGF1001TCE
+        R11        2                      PASSIVE     RC2512FK-0730RL
+        R12        1                      PASSIVE     RC2512FK-0730RL
+
+[00060] FUSED13
+        F5         2                      PASSIVE     JFC2410-0500TS
+        R13        1                      PASSIVE     RC0402FR-07100RL
+        R14        1                      PASSIVE     0402WGF1001TCE
+        R15        2                      PASSIVE     RC2512FK-0730RL
+        R16        1                      PASSIVE     RC2512FK-0730RL
+
+[00059] FUSED12
+        F6         2                      PASSIVE     JFC2410-0500TS
+        R17        1                      PASSIVE     RC0402FR-07100RL
+        R18        1                      PASSIVE     0402WGF1001TCE
+        R19        2                      PASSIVE     RC2512FK-0730RL
+        R20        1                      PASSIVE     RC2512FK-0730RL
+
+[00058] FUSED11
+        F7         2                      PASSIVE     JFC2410-0500TS
+        R21        1                      PASSIVE     RC0402FR-07100RL
+        R22        1                      PASSIVE     0402WGF1001TCE
+        R23        2                      PASSIVE     RC2512FK-0730RL
+        R24        1                      PASSIVE     RC2512FK-0730RL
+
+[00057] FUSED10
+        F8         2                      PASSIVE     JFC2410-0500TS
+        R25        1                      PASSIVE     RC0402FR-07100RL
+        R26        1                      PASSIVE     0402WGF1001TCE
+        R27        2                      PASSIVE     RC2512FK-0730RL
+        R28        1                      PASSIVE     RC2512FK-0730RL
+
+[00056] FUSED9
+        F9         2                      PASSIVE     JFC2410-0500TS
+        R29        1                      PASSIVE     RC0402FR-07100RL
+        R30        1                      PASSIVE     0402WGF1001TCE
+        R31        2                      PASSIVE     RC2512FK-0730RL
+        R32        1                      PASSIVE     RC2512FK-0730RL
+
+[00055] FUSED8
+        F10        2                      PASSIVE     JFC2410-0500TS
+        R33        1                      PASSIVE     RC0402FR-07100RL
+        R34        1                      PASSIVE     0402WGF1001TCE
+        R39        2                      PASSIVE     RC2512FK-0730RL
+        R44        1                      PASSIVE     RC2512FK-0730RL
+
+[00054] FUSED7
+        F11        2                      PASSIVE     JFC2410-0500TS
+        R45        1                      PASSIVE     RC0402FR-07100RL
+        R46        1                      PASSIVE     0402WGF1001TCE
+        R47        2                      PASSIVE     RC2512FK-0730RL
+        R48        1                      PASSIVE     RC2512FK-0730RL
+
+[00053] FUSED6
+        F12        2                      PASSIVE     JFC2410-0500TS
+        R49        1                      PASSIVE     RC0402FR-07100RL
+        R50        1                      PASSIVE     0402WGF1001TCE
+        R51        2                      PASSIVE     RC2512FK-0730RL
+        R52        1                      PASSIVE     RC2512FK-0730RL
+
+[00052] FUSED5
+        F13        2                      PASSIVE     JFC2410-0500TS
+        R53        1                      PASSIVE     RC0402FR-07100RL
+        R54        1                      PASSIVE     0402WGF1001TCE
+        R55        2                      PASSIVE     RC2512FK-0730RL
+        R56        1                      PASSIVE     RC2512FK-0730RL
+
+[00051] FUSED4
+        F14        2                      PASSIVE     JFC2410-0500TS
+        R57        1                      PASSIVE     RC0402FR-07100RL
+        R58        1                      PASSIVE     0402WGF1001TCE
+        R59        2                      PASSIVE     RC2512FK-0730RL
+        R60        1                      PASSIVE     RC2512FK-0730RL
+
+[00050] FUSED3
+        F15        2                      PASSIVE     JFC2410-0500TS
+        R61        1                      PASSIVE     RC0402FR-07100RL
+        R62        1                      PASSIVE     0402WGF1001TCE
+        R66        2                      PASSIVE     RC2512FK-0730RL
+        R68        1                      PASSIVE     RC2512FK-0730RL
+
+[00049] FUSED2
+        F16        2                      PASSIVE     JFC2410-0500TS
+        R69        1                      PASSIVE     RC0402FR-07100RL
+        R70        1                      PASSIVE     0402WGF1001TCE
+        R71        2                      PASSIVE     RC2512FK-0730RL
+        R72        1                      PASSIVE     RC2512FK-0730RL
+
+[00048] FUSED1
+        F17        2                      PASSIVE     JFC2410-0500TS
+        R73        1                      PASSIVE     RC0402FR-07100RL
+        R74        1                      PASSIVE     0402WGF1001TCE
+        R75        2                      PASSIVE     RC2512FK-0730RL
+        R76        1                      PASSIVE     RC2512FK-0730RL
+
+[00047] FUSED0
+        F18        2                      PASSIVE     JFC2410-0500TS
+        R77        1                      PASSIVE     RC0402FR-07100RL
+        R78        2                      PASSIVE     RC2512FK-0730RL
+        R79        1                      PASSIVE     RC2512FK-0730RL
+
+[00046] DVDD
+        C39        1                      PASSIVE     CL10B105KA8NNNC
+        U1         49      DVDD           PASSIVE     BQ79616PAPRQ1
+
+[00045] CVDD
+        C43        1                      PASSIVE     CL21B475KOFNNNE
+        U1         45      CVDD           PASSIVE     BQ79616PAPRQ1
+        U1         52      RX             PASSIVE     BQ79616PAPRQ1
+
+[00044] COMMB_P
+        J9B        1       BR             PASSIVE     43650-0204
+        T1B        6       6              PASSIVE     SM91502ALA-E
+
+[00043] COMMB_N
+        J9B        2       BL             PASSIVE     43650-0204
+        T1B        4       4              PASSIVE     SM91502ALA-E
+
+[00042] COMMA_P
+        J9A        1       BR             PASSIVE     43650-0204
+        T1A        6       6              PASSIVE     SM91502ALA-E
+
+[00041] COMMA_N
+        J9A        2       BL             PASSIVE     43650-0204
+        T1A        4       4              PASSIVE     SM91502ALA-E
+
+[00040] COML._P
+        C48A       1                      PASSIVE     0402YA101JAT2A
+        R80A       1                      PASSIVE     0402WGF499JTCE
+        R81A       2                      PASSIVE     HP03W5F1001T5E
+        U1         40      COMLP          PASSIVE     BQ79616PAPRQ1
+
+[00039] COML._N
+        C49A       1                      PASSIVE     0402YA101JAT2A
+        R81A       1                      PASSIVE     HP03W5F1001T5E
+        R82A       1                      PASSIVE     0402WGF499JTCE
+        U1         41      COMLN          PASSIVE     BQ79616PAPRQ1
+
+[00038] COMH._P
+        C48B       1                      PASSIVE     0402YA101JAT2A
+        R80B       1                      PASSIVE     0402WGF499JTCE
+        R81B       2                      PASSIVE     HP03W5F1001T5E
+        U1         43      COMHP          PASSIVE     BQ79616PAPRQ1
+
+[00037] COMH._N
+        C49B       1                      PASSIVE     0402YA101JAT2A
+        R81B       1                      PASSIVE     HP03W5F1001T5E
+        R82B       1                      PASSIVE     0402WGF499JTCE
+        U1         42      COMHN          PASSIVE     BQ79616PAPRQ1
+
+[00036] CELL16
+        F1         1                      PASSIVE     JFC2410-0500TS
+        F2         1                      PASSIVE     JFC2410-0500TS
+        MH1        1                      PASSIVE     HOLE
+
+[00035] CELL15
+        F3         1                      PASSIVE     JFC2410-0500TS
+        MH2        1                      PASSIVE     HOLE
+        MH3        1                      PASSIVE     HOLE
+
+[00034] CELL14
+        F4         1                      PASSIVE     JFC2410-0500TS
+        MH4        1                      PASSIVE     HOLE
+        MH5        1                      PASSIVE     HOLE
+
+[00033] CELL13
+        F5         1                      PASSIVE     JFC2410-0500TS
+        MH6        1                      PASSIVE     HOLE
+        MH7        1                      PASSIVE     HOLE
+
+[00032] CELL12
+        F6         1                      PASSIVE     JFC2410-0500TS
+        MH8        1                      PASSIVE     HOLE
+        MH9        1                      PASSIVE     HOLE
+
+[00031] CELL11
+        F7         1                      PASSIVE     JFC2410-0500TS
+        MH10       1                      PASSIVE     HOLE
+        MH11       1                      PASSIVE     HOLE
+
+[00030] CELL10
+        F8         1                      PASSIVE     JFC2410-0500TS
+        MH12       1                      PASSIVE     HOLE
+        MH13       1                      PASSIVE     HOLE
+
+[00029] CELL9
+        F9         1                      PASSIVE     JFC2410-0500TS
+        MH14       1                      PASSIVE     HOLE
+        MH15       1                      PASSIVE     HOLE
+
+[00028] CELL8
+        F10        1                      PASSIVE     JFC2410-0500TS
+        MH16       1                      PASSIVE     HOLE
+        MH17       1                      PASSIVE     HOLE
+
+[00027] CELL7
+        F11        1                      PASSIVE     JFC2410-0500TS
+        MH18       1                      PASSIVE     HOLE
+        MH19       1                      PASSIVE     HOLE
+
+[00026] CELL6
+        F12        1                      PASSIVE     JFC2410-0500TS
+        MH20       1                      PASSIVE     HOLE
+        MH21       1                      PASSIVE     HOLE
+
+[00025] CELL5
+        F13        1                      PASSIVE     JFC2410-0500TS
+        MH22       1                      PASSIVE     HOLE
+        MH23       1                      PASSIVE     HOLE
+
+[00024] CELL4
+        F14        1                      PASSIVE     JFC2410-0500TS
+        MH24       1                      PASSIVE     HOLE
+        MH25       1                      PASSIVE     HOLE
+
+[00023] CELL3
+        F15        1                      PASSIVE     JFC2410-0500TS
+        MH26       1                      PASSIVE     HOLE
+        MH27       1                      PASSIVE     HOLE
+
+[00022] CELL2
+        F16        1                      PASSIVE     JFC2410-0500TS
+        MH28       1                      PASSIVE     HOLE
+        MH29       1                      PASSIVE     HOLE
+
+[00021] CELL1
+        F17        1                      PASSIVE     JFC2410-0500TS
+        MH30       1                      PASSIVE     HOLE
+        MH31       1                      PASSIVE     HOLE
+
+[00020] CELL0
+        F18        1                      PASSIVE     JFC2410-0500TS
+        F19        1                      PASSIVE     JFC2410-0500TS
+        MH32       1                      PASSIVE     HOLE
+
+[00019] CB16
+        C2         1                      PASSIVE     CL10B474KA8NNNC
+        C29        1                      PASSIVE     CL10B474KA8NNNC
+        D1         1                      PASSIVE     LTST-C190KRKT
+        R3         1                      PASSIVE     RC2512FK-0730RL
+        R4         2                      PASSIVE     RC2512FK-0730RL
+        U1         2       CB16           PASSIVE     BQ79616PAPRQ1
+
+[00018] CB15
+        C2         2                      PASSIVE     CL10B474KA8NNNC
+        C4         1                      PASSIVE     CL10B474KA8NNNC
+        D2         1                      PASSIVE     LTST-C190KRKT
+        R7         1                      PASSIVE     RC2512FK-0730RL
+        R8         2                      PASSIVE     RC2512FK-0730RL
+        U1         4       CB15           PASSIVE     BQ79616PAPRQ1
+
+[00017] CB14
+        C4         2                      PASSIVE     CL10B474KA8NNNC
+        C6         1                      PASSIVE     CL10B474KA8NNNC
+        D3         1                      PASSIVE     LTST-C190KRKT
+        R11        1                      PASSIVE     RC2512FK-0730RL
+        R12        2                      PASSIVE     RC2512FK-0730RL
+        U1         6       CB14           PASSIVE     BQ79616PAPRQ1
+
+[00016] CB13
+        C6         2                      PASSIVE     CL10B474KA8NNNC
+        C8         1                      PASSIVE     CL10B474KA8NNNC
+        D4         1                      PASSIVE     LTST-C190KRKT
+        R15        1                      PASSIVE     RC2512FK-0730RL
+        R16        2                      PASSIVE     RC2512FK-0730RL
+        U1         8       CB13           PASSIVE     BQ79616PAPRQ1
+
+[00015] CB12
+        C8         2                      PASSIVE     CL10B474KA8NNNC
+        C10        1                      PASSIVE     CL10B474KA8NNNC
+        D5         1                      PASSIVE     LTST-C190KRKT
+        R19        1                      PASSIVE     RC2512FK-0730RL
+        R20        2                      PASSIVE     RC2512FK-0730RL
+        U1         10      CB12           PASSIVE     BQ79616PAPRQ1
+
+[00014] CB11
+        C10        2                      PASSIVE     CL10B474KA8NNNC
+        C12        1                      PASSIVE     CL10B474KA8NNNC
+        D6         1                      PASSIVE     LTST-C190KRKT
+        R23        1                      PASSIVE     RC2512FK-0730RL
+        R24        2                      PASSIVE     RC2512FK-0730RL
+        U1         12      CB11           PASSIVE     BQ79616PAPRQ1
+
+[00013] CB10
+        C12        2                      PASSIVE     CL10B474KA8NNNC
+        C14        1                      PASSIVE     CL10B474KA8NNNC
+        D7         1                      PASSIVE     LTST-C190KRKT
+        R27        1                      PASSIVE     RC2512FK-0730RL
+        R28        2                      PASSIVE     RC2512FK-0730RL
+        U1         14      CB10           PASSIVE     BQ79616PAPRQ1
+
+[00012] CB9
+        C14        2                      PASSIVE     CL10B474KA8NNNC
+        C16        1                      PASSIVE     CL10B474KA8NNNC
+        D8         1                      PASSIVE     LTST-C190KRKT
+        R31        1                      PASSIVE     RC2512FK-0730RL
+        R32        2                      PASSIVE     RC2512FK-0730RL
+        U1         16      CB9            PASSIVE     BQ79616PAPRQ1
+
+[00011] CB8
+        C16        2                      PASSIVE     CL10B474KA8NNNC
+        C19        1                      PASSIVE     CL10B474KA8NNNC
+        D9         1                      PASSIVE     LTST-C190KRKT
+        R39        1                      PASSIVE     RC2512FK-0730RL
+        R44        2                      PASSIVE     RC2512FK-0730RL
+        U1         18      CB8            PASSIVE     BQ79616PAPRQ1
+
+[00010] CB7
+        C19        2                      PASSIVE     CL10B474KA8NNNC
+        C21        1                      PASSIVE     CL10B474KA8NNNC
+        D10        1                      PASSIVE     LTST-C190KRKT
+        R47        1                      PASSIVE     RC2512FK-0730RL
+        R48        2                      PASSIVE     RC2512FK-0730RL
+        U1         20      CB7            PASSIVE     BQ79616PAPRQ1
+
+[00009] CB6
+        C21        2                      PASSIVE     CL10B474KA8NNNC
+        C23        1                      PASSIVE     CL10B474KA8NNNC
+        D11        1                      PASSIVE     LTST-C190KRKT
+        R51        1                      PASSIVE     RC2512FK-0730RL
+        R52        2                      PASSIVE     RC2512FK-0730RL
+        U1         22      CB6            PASSIVE     BQ79616PAPRQ1
+
+[00008] CB5
+        C23        2                      PASSIVE     CL10B474KA8NNNC
+        C25        1                      PASSIVE     CL10B474KA8NNNC
+        D12        1                      PASSIVE     LTST-C190KRKT
+        R55        1                      PASSIVE     RC2512FK-0730RL
+        R56        2                      PASSIVE     RC2512FK-0730RL
+        U1         24      CB5            PASSIVE     BQ79616PAPRQ1
+
+[00007] CB4
+        C25        2                      PASSIVE     CL10B474KA8NNNC
+        C27        1                      PASSIVE     CL10B474KA8NNNC
+        D13        1                      PASSIVE     LTST-C190KRKT
+        R59        1                      PASSIVE     RC2512FK-0730RL
+        R60        2                      PASSIVE     RC2512FK-0730RL
+        U1         26      CB4            PASSIVE     BQ79616PAPRQ1
+
+[00006] CB3
+        C27        2                      PASSIVE     CL10B474KA8NNNC
+        C30        1                      PASSIVE     CL10B474KA8NNNC
+        D14        1                      PASSIVE     LTST-C190KRKT
+        R66        1                      PASSIVE     RC2512FK-0730RL
+        R68        2                      PASSIVE     RC2512FK-0730RL
+        U1         28      CB3            PASSIVE     BQ79616PAPRQ1
+
+[00005] CB2
+        C30        2                      PASSIVE     CL10B474KA8NNNC
+        C35        1                      PASSIVE     CL10B474KA8NNNC
+        D15        1                      PASSIVE     LTST-C190KRKT
+        R71        1                      PASSIVE     RC2512FK-0730RL
+        R72        2                      PASSIVE     RC2512FK-0730RL
+        U1         30      CB2            PASSIVE     BQ79616PAPRQ1
+
+[00004] CB1
+        C35        2                      PASSIVE     CL10B474KA8NNNC
+        C38        1                      PASSIVE     CL10B474KA8NNNC
+        D16        1                      PASSIVE     LTST-C190KRKT
+        R75        1                      PASSIVE     RC2512FK-0730RL
+        R76        2                      PASSIVE     RC2512FK-0730RL
+        U1         32      CB1            PASSIVE     BQ79616PAPRQ1
+
+[00003] CB0
+        C38        2                      PASSIVE     CL10B474KA8NNNC
+        C44        1                      PASSIVE     CL10B474KA8NNNC
+        R78        1                      PASSIVE     RC2512FK-0730RL
+        R79        2                      PASSIVE     RC2512FK-0730RL
+        U1         34      CB0            PASSIVE     BQ79616PAPRQ1
+
+[00002] BAT
+        C29        2                      PASSIVE     CL10B474KA8NNNC
+        C32        1                      PASSIVE     CC0402KRX7R0BB103
+        R67        2                      PASSIVE     RC0402FR-0730RL
+        U1         1       BAT            PASSIVE     BQ79616PAPRQ1
+
+[00001] AVDD
+        C40        1                      PASSIVE     CL10B105KA8NNNC
+        U1         38      AVDD           PASSIVE     BQ79616PAPRQ1
+
