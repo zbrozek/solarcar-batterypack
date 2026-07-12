@@ -32,6 +32,10 @@
 * Added a reverse-polarity fuse-blowing schottky diode to LVB/GND.
 * Added bus switch to onboard SWD and debug buses to avoid STM32F1 backfeed.
 * Changed HV BLEED resistor to 1k to reduce NC SSR self-heating.
+* Fixed mistake where pack shunt override went to the array channel.
 
 * Use buffered reference for VDDA and VREF+ on STM32.
-
+* Move GNSS receiver to USART6 on PC6/PC7 to avoid DMA conflict with BQ79616.
+* Transformer-couple isoUART from BQ79600.
+* Change isoUART to 2-pin connector.
+* Add second isoUART interface to implement fault-tolerant ring.
