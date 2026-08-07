@@ -2,18 +2,21 @@
 ![Image of battery pack](assets/images/pack-in-progress.jpg)
 
 ## What is this?
-This is the mechanical assembly for a battery pack intended for solar cars competing in common races like ASC or WSC. It's designed to be reasonably easy to fabricate and assemble, but without significantly compromising the quality of the design.
+This is the mechanical and electronic design for a battery pack intended for solar cars competing in common races like ASC or WSC. It's designed to be reasonably easy to fabricate and assemble, but without significantly compromising the quality of the design.
 
 ## Who are you?
 I'm Sasha Zbrozek and I was trained as an electrical engineer. I was on Stanford's solar car team from 2006 through 2010 and continue to participate with them and the broader solar car community from the comfort of my golden years. I have a normal day job that takes up most of my time, but we've all got to have hobbies.
 
 ## Why did you make this?
-I participated as a staff member in the 2025 Formula Sun Grand Prix and enjoyed working with the students immensely. I think the community would benefit from having more open-source hardware and software available for students to take, modify, and improve.
+I participated as a staff member in the 2025 Formula Sun Grand Prix and enjoyed working with the students immensely. I think the community would benefit from having more open-source content available for students to take, modify, and improve.
 
 And why a battery pack specifically? I felt that many cars under-engineered them and that there was a lot of room to try and introduce improvements that would have both performance and safety benefits for solar racing as a whole.
 
 ## Are you going to open-source the BMS too?
-When I get around to designing the cell monitoring board, I will open source that. No promises on the BMS main board, however. Those are pretty specific to each individual solar car. I will at least include a mechanical template for anyone who wants to design their own.
+I did! Check the "bms" folder. This is an expansive design with way more features that most teams are going to use. There's a lot of electronic content in there that teams might want to use even if they aren't using this design in its totality. Check out:
+- The MP6519 current regulator sheet for contactor coil economization.
+- The HV architecture page and its very-aggressive precharge.
+- The HV bleed page for an extremely simple DC bus safety enhancement implementation.
 
 ## Key design decisions and their motivations
 ### 32s9p arrangement
@@ -46,6 +49,8 @@ The cell spacer plates are intended to be 3D printed in [PC FR](https://us.store
 
 ![Image of a fluid channel for glue delivery for cell retention.](assets/images/glue-injection-path.jpg)
 
+**Do not print parts without calibrated shrinkage calibration.** This design is not tolerant of undersized plastic parts.
+
 
 ### Mid-pack main fuse
 A mid-pack fuse is a convenient way to halve the available electric potential (and thus quarter the available fault power) after a fault or during service. I prefer them to high- or low-side fuses. The mid-pack installation location also leverages the pack symmetry to reduce the total number of bolted joints.
@@ -68,8 +73,7 @@ This design will come with a number of assembly aids to help with ergonomics, sa
 
 ## What's not done yet?
 Lots! Off the top of my head:
-- There is no sealing plug to prevent airflow from short-circuiting around the fuse yet.
-- Ditto for the fuse-side harness passthrough between the two cell monitoring boards.
+- There is no plug (airflow baffle) for the harness passthrough between the two cell monitoring boards.
 - There is no fuse cover yet.
 - I don't like the LV battery retention scheme and will probably do it again.
 - Need to design assembly aids for centering the aluminum plates when gluing them to the chassis.
@@ -84,6 +88,14 @@ As this design matures I'll create additional documentation for things like the 
 - Ability to buy things from typical online vendors with a credit card (everything else)
 - Ability to fixture an assembly and use epoxy to put it together
 - Cell spot welding
-- 3D printing in appropriate materials, primariliy PC FR and PA6-GF
+- 3D printing in appropriate materials, primarily PC FR.
 - Routing / milling of large sandwich panels
 - Standard and long reach Torx drivers
+
+## What are current versions?
+I really need to use the GitHub release feature to make cohesive bundles of buildable artifacts. Until then, if you're building _right now_:
+- The mechanical design is up-to-date. If there's a file missing, please file an issue.
+- bms_afe-1_1
+- Don't build any bms_afe_tester for now. That design is getting overhauled.
+- bms_mainboard-1_0 (1.1 is coming end of August 2026)
+- bms_fan_breakout-1_0
