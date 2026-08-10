@@ -68,7 +68,7 @@ GenerateClassCluster=0
 DocumentUniqueId=GGAUYCXI
 
 [Document2]
-DocumentPath=mcu_stm32f4.SchDoc
+DocumentPath=mcu_stm32h5.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -136,23 +136,6 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document6]
-DocumentPath=mcu_stm32f4.Harness
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document7]
 DocumentPath=outjob.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -169,7 +152,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document8]
+[Document7]
 DocumentPath=pmic_tps65263_buck.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -186,7 +169,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EUECGJGS
 
-[Document9]
+[Document8]
 DocumentPath=adc_mcp3913.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -203,7 +186,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CWOWNESJ
 
-[Document10]
+[Document9]
 DocumentPath=hv_architecture.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -220,7 +203,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GTUJJMZW
 
-[Document11]
+[Document10]
 DocumentPath=hv_architecture.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -237,7 +220,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document12]
+[Document11]
 DocumentPath=adc_mcp3913.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -254,7 +237,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document13]
+[Document12]
 DocumentPath=eth_100base-tx_magnetics.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -271,7 +254,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CQHVFTDE
 
-[Document14]
+[Document13]
 DocumentPath=bridge_bq79600.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -288,7 +271,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GUDJQUJE
 
-[Document15]
+[Document14]
 DocumentPath=filter_diff_shunt.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -305,7 +288,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HGLXXIKK
 
-[Document16]
+[Document15]
 DocumentPath=conn_usbc.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -322,7 +305,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EOHQNPOK
 
-[Document17]
+[Document16]
 DocumentPath=hv_bleed.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -339,7 +322,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RYGDWLCW
 
-[Document18]
+[Document17]
 DocumentPath=bms_mainboard-1_1.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -356,7 +339,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VAXNDWDO
 
-[Document19]
+[Document18]
 DocumentPath=current_mp6519.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -373,7 +356,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BEEGNWBW
 
-[Document20]
+[Document19]
 DocumentPath=pmic_vicor_brick.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -390,7 +373,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EQKKOAPT
 
-[Document21]
+[Document20]
 DocumentPath=can_tcan1462v.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -407,7 +390,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YKKAOVVI
 
-[Document22]
+[Document21]
 DocumentPath=conn_harness_lv.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -424,7 +407,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XSPDRXMF
 
-[Document23]
+[Document22]
 DocumentPath=eth_ksz8567r_switch.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -441,7 +424,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LVPECBJQ
 
-[Document24]
+[Document23]
 DocumentPath=st-link-v2.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -458,7 +441,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JNJVSDSG
 
-[Document25]
+[Document24]
 DocumentPath=analog_sensor_input.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -475,7 +458,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=IVZJPKVQ
 
-[Document26]
+[Document25]
 DocumentPath=switch_vn9e30f.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -492,7 +475,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MUQDIYUF
 
-[Document27]
+[Document26]
 DocumentPath=isolator_si8662.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -509,7 +492,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BXGQBYTZ
 
-[Document28]
+[Document27]
 DocumentPath=digital_input_protection.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -526,7 +509,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=OSQRXPBA
 
-[Document29]
+[Document28]
 DocumentPath=usb_usb2534.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -543,7 +526,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QXOQGUHC
 
-[Document30]
+[Document29]
 DocumentPath=pmic_tps79933.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -560,7 +543,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=OKTBYORZ
 
-[Document31]
+[Document30]
 DocumentPath=imu_ism330.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -577,7 +560,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MGBXDVCI
 
-[Document32]
+[Document31]
 DocumentPath=conn_fan.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -594,7 +577,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BIVUUVGZ
 
-[Document33]
+[Document32]
 DocumentPath=filter_diff_shunt.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -611,7 +594,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document34]
+[Document33]
 DocumentPath=conn_usbc.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -628,7 +611,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document35]
+[Document34]
 DocumentPath=current_mp6519.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -645,7 +628,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document36]
+[Document35]
 DocumentPath=pmic_vicor_brick.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -662,7 +645,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document37]
+[Document36]
 DocumentPath=conn_harness_lv.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -679,7 +662,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document38]
+[Document37]
 DocumentPath=can_tcan1462v.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -696,7 +679,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document39]
+[Document38]
 DocumentPath=eth_ksz8567r_switch.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -713,7 +696,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document40]
+[Document39]
 DocumentPath=eth_100base-tx_magnetics.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -730,7 +713,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document41]
+[Document40]
 DocumentPath=switch_vn9e30f.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -747,7 +730,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document42]
+[Document41]
 DocumentPath=eth_10base-t1s_phy.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -764,7 +747,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HXFTPGOJ
 
-[Document43]
+[Document42]
 DocumentPath=eth_10base-t1s_phy.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -781,7 +764,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document44]
+[Document43]
 DocumentPath=usb_usb2534.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -798,7 +781,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document45]
+[Document44]
 DocumentPath=st-link-v2.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -815,7 +798,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document46]
+[Document45]
 DocumentPath=dht_bme280.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -832,7 +815,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=NUXMYUCP
 
-[Document47]
+[Document46]
 DocumentPath=dht_bme280.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -849,7 +832,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document48]
+[Document47]
 DocumentPath=gnss_quectel_lc29hea.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -866,7 +849,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CRYUSAEL
 
-[Document49]
+[Document48]
 DocumentPath=gnss_quectel_lc29hea.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -883,7 +866,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document50]
+[Document49]
 DocumentPath=isolator_si8662.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -900,7 +883,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document51]
+[Document50]
 DocumentPath=imu_ism330.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -917,7 +900,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document52]
+[Document51]
 DocumentPath=bridge_bq79600.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -934,7 +917,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document53]
+[Document52]
 DocumentPath=conn_isouart.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -951,7 +934,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JGORMWYM
 
-[Document54]
+[Document53]
 DocumentPath=conn_isouart.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -968,7 +951,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document55]
+[Document54]
 DocumentPath=..\..\altium_library\database.DbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -985,7 +968,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document56]
+[Document55]
 DocumentPath=ref_mcp1502_2p5.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1002,7 +985,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VARVXDAR
 
-[Document57]
+[Document56]
 DocumentPath=analog_lvb_sense.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1018,6 +1001,23 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=OHFPYSBL
+
+[Document57]
+DocumentPath=mcu_stm32h5.Harness
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
 
 [ProjectVariant1]
 UniqueId=89020761-20dd-4daf-924e-8ea3bb6f03b6

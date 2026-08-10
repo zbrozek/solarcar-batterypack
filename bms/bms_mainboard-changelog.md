@@ -1,7 +1,7 @@
 ## Changes to consider for 1.x to 2.0
 * Add e-paper interface for status indication.
 
-## Changes from 1.0 --> 1.1
+## Changes completed from 1.0 --> 1.1
 * Added P600_VERTICAL to the solid-connect rule.
 * Added TO-247-2_VERTICAL to the solid-connect rule.
 * Fixed swapped SWDIO and SWCLK on STM32F103.
@@ -36,8 +36,9 @@
 * Added second isoUART interface to implement fault-tolerant ring.
 * Changed VDDA/VREF to 2.5 volt precision regulator.
 * Changed analog input dividers to 1:2 for 5 volt range on 2.5 volt reference.
+* Migrated to STM32H5F5LJH7Q to improve power consumption and performance.
+* Moved LV_PWM to a regular timer.
 
-* Move GNSS receiver UART/USART to avoid DMA conflict with BQ79616.
-* Migrate to STM32H5F5LJH7Q to improve power consumption and performance.
+## Changes remaining to do from 1.0 --> 1.1
 * Use BQ25690 for LV battery charging to improve efficiency.
-* Move LV_PWM to a regular timer.
+* Maybe downsize the DC/DC to try and improve efficiency.
