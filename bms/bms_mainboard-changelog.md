@@ -1,7 +1,5 @@
 ## Changes to consider for 1.x to 2.0
 * Add e-paper interface for status indication.
-* Migrate to STM32H563LI or STM32H573LI for lower power consumption.
-* Use hotswap controller instead of diode on DC/DC output.
 
 ## Changes from 1.0 --> 1.1
 * Added P600_VERTICAL to the solid-connect rule.
@@ -13,7 +11,6 @@
 * Changed 24 MHz crystal BOM item and matching capacitors due to stocking.
 * Added LED to HV_nBLEED signal.
 * Added pull-up to SCL in case future chips do clock stretching.
-* Moved isoUART to COMH on BQ79600.
 * Switched to 15 volt Vicor for DC/DC.
 * Used 3P3 for MP6519 EN pull-up because EN gates VCC regulator.
 * Connected GNSS receiver wake line.
@@ -37,6 +34,10 @@
 * Transformer-coupled isoUART from BQ79600.
 * Changed isoUART to 2-pin connector.
 * Added second isoUART interface to implement fault-tolerant ring.
+* Changed VDDA/VREF to 2.5 volt precision regulator.
+* Changed analog input dividers to 1:2 for 5 volt range on 2.5 volt reference.
 
-* Use buffered reference for VDDA and VREF+ on STM32.
-* Move GNSS receiver to USART6 on PC6/PC7 to avoid DMA conflict with BQ79616.
+* Move GNSS receiver UART/USART to avoid DMA conflict with BQ79616.
+* Migrate to STM32H5F5LJH7Q to improve power consumption and performance.
+* Use BQ25690 for LV battery charging to improve efficiency.
+* Move LV_PWM to a regular timer.
