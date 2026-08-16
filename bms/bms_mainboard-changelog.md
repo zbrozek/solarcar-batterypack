@@ -20,7 +20,7 @@
 * Eliminated "shunt filter" on voltage sense channel.
 * Harmonized -3dB corner for voltage and current sensing.
 * Nudged MP6519 circuits to avoid contactor fill ports.
-* Added switched and buffered LVB divider to STM32 ADC input on PC0, ADCx_IN10.
+* Added switched and buffered LVB divider to STM32 ADC input.
 * Changed PPS LED to red due to low VIO rail on LC29HEU GNSS receiver.
 * Added PPS test point.
 * Reversed DIP switch net numbering to match printed label on DIP switch.
@@ -38,6 +38,11 @@
 * Changed analog input dividers to 1:2 for 5 volt range on 2.5 volt reference.
 * Migrated to STM32H5F5LJH7Q to improve power consumption and performance.
 * Moved LV_PWM to a regular timer.
+* Changed D12 (LV TVS) to 15 volt standoff.
+* Changed D13 (HV TVS) to 132 volt standoff.
+* Eliminated the HV-present indicator. In practice it turned out not-useful.
+* Eliminated FPC fan header and breakout. Used PC-industry 4-pin fan header.
+* Add SD card bypass cap and pull-ups.
 
 ## Changes remaining to do from 1.0 --> 1.1
 * Use BQ25690 for LV battery charging to improve efficiency.
