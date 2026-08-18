@@ -19,19 +19,25 @@ LibrarySearchPath=
 OrcadMultiValueDelimiter=,
 SearchSubDirectories=0
 SchemaName=ALTIUM
-LastFocusedTable=inductor.csv
+LastFocusedTable=capacitor.csv
 [Table1]
 SchemaName=
 TableName=capacitor.csv
 Enabled=True
 UserWhere=1
 UserWhereText=[Manufacturer Part Number] = '{Manufacturer Part Number}'
+BrowserOrder_Sorting=
+BrowserOrder_Grouping=
+BrowserOrder_Visible=SymbolName0=142|SymbolLibrary0=201|FootprintName0=156|FootprintLibrary0=215|Manufacturer Part Number0=280|Manufacturer0=334|Package0=103|Voltage Rating0=153|Dielectric0=110|Capacitance0=133|Supplier 10=116|Supplier Part Number 10=220|Supplier 20=116|Supplier Part Number 20=220|ComponentLink1Description0=256|ComponentLink1URL0=1136
 [Table2]
 SchemaName=
 TableName=fb.csv
 Enabled=True
 UserWhere=1
 UserWhereText=[Manufacturer Part Number] = '{Manufacturer Part Number}'
+BrowserOrder_Sorting=
+BrowserOrder_Grouping=
+BrowserOrder_Visible=SymbolName0=142|SymbolLibrary0=195|FootprintName0=156|FootprintLibrary0=209|Current Rating (mA)0=193|Manufacturer Part Number0=247|Manufacturer0=328|Package0=103|Z @ 100 MHz0=143|DCR (mOhms)0=148|Supplier 10=116|Supplier Part Number 10=220|Supplier 20=116|Supplier Part Number 20=220|ComponentLink1Description0=256|ComponentLink1URL0=1088
 [Table3]
 SchemaName=
 TableName=inductor.csv
@@ -47,12 +53,18 @@ TableName=misc.csv
 Enabled=True
 UserWhere=1
 UserWhereText=[Manufacturer Part Number] = '{Manufacturer Part Number}'
+BrowserOrder_Sorting=
+BrowserOrder_Grouping=
+BrowserOrder_Visible=SymbolName0=167|SymbolLibrary0=159|FootprintName0=156|FootprintLibrary0=266|Manufacturer Part Number0=247|Manufacturer0=143|Supplier 10=116|Supplier Part Number 10=220|Supplier 20=116|Supplier Part Number 20=220|ComponentLink1Description0=256|ComponentLink1URL0=585
 [Table5]
 SchemaName=
 TableName=resistor.csv
 Enabled=True
 UserWhere=1
 UserWhereText=[Manufacturer Part Number] = '{Manufacturer Part Number}'
+BrowserOrder_Sorting=
+BrowserOrder_Grouping=
+BrowserOrder_Visible=SymbolName0=154|SymbolLibrary0=186|FootprintName0=156|FootprintLibrary0=200|Manufacturer Part Number0=310|Manufacturer0=328|Package0=103|Power Rating (mW)0=187|Value0=83|Tolerance0=114|Temperature Coefficient0=224|Supplier 10=116|Supplier Part Number 10=220|Supplier 20=116|Supplier Part Number 20=220|ComponentLink1Description0=256|ComponentLink1URL0=1075
 [FieldMap1]
 Options=FieldName=capacitor.csv.SymbolName|TableNameOnly=capacitor.csv|FieldNameOnly=SymbolName|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
 [FieldMap2]
