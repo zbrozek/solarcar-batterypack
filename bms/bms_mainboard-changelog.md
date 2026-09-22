@@ -11,7 +11,6 @@
 * Changed 24 MHz crystal BOM item and matching capacitors due to stocking.
 * Added LED to HV_nBLEED signal.
 * Added pull-up to SCL in case future chips do clock stretching.
-* Switched to 15 volt Vicor for DC/DC.
 * Used 3P3 for MP6519 EN pull-up because EN gates VCC regulator.
 * Connected GNSS receiver wake line.
 * Removed blocking diode and pull up resistor on GNSS nRST.
@@ -21,7 +20,6 @@
 * Harmonized -3dB corner for voltage and current sensing.
 * Nudged MP6519 circuits to avoid contactor fill ports.
 * Added switched and buffered LVB divider to STM32 ADC input.
-* Changed PPS LED to red due to low VIO rail on LC29HEU GNSS receiver.
 * Added PPS test point.
 * Reversed DIP switch net numbering to match printed label on DIP switch.
 * Adjusted RGB LED resistors to get better color intensity matching.
@@ -34,7 +32,7 @@
 * Transformer-coupled isoUART from BQ79600.
 * Changed isoUART to 2-pin connector.
 * Added second isoUART interface to implement fault-tolerant ring.
-* Changed VDDA/VREF to 2.5 volt precision regulator.
+* Changed VREF to 2.5 volt precision regulator.
 * Changed analog input dividers to 1:2 for 5 volt range on 2.5 volt reference.
 * Migrated to STM32H5F5LJH7Q to improve power consumption and performance.
 * Moved LV_PWM to a regular timer.
@@ -43,7 +41,12 @@
 * Eliminated the HV-present indicator. In practice it turned out not-useful.
 * Eliminated FPC fan header and breakout. Used PC-industry 4-pin fan header.
 * Add SD card bypass cap and pull-ups.
+* Switch from 25 MHz crystal to 16 MHz crystal on STM32H5.
+* Use BQ25690 for LV battery charging.
+* Switch Vicor Micro to Cincon 40 watt ECLB for improved efficiency.
+* Adjusted optical SSR LED drive strengths upwards to cover more edge cases.
+* Added TAS5720ATDAPRQ1 audio amplifier; powered from LV2.
+* Fixed top sheet note about PWM fractions for precharge relay current targets.
 
 ## Changes remaining to do from 1.0 --> 1.1
-* Use BQ25690 for LV battery charging to improve efficiency.
-* Maybe downsize the DC/DC to try and improve efficiency.
+* Change USB hub to LAN9514 and connect on-chip PHY to switch; delete RJ-45.
