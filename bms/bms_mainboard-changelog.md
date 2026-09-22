@@ -49,4 +49,4 @@
 * Fixed top sheet note about PWM fractions for precharge relay current targets.
 
 ## Changes remaining to do from 1.0 --> 1.1
-* Change USB hub to LAN9514 and connect on-chip PHY to switch; delete RJ-45.
+* Add RTL8152B and connect it to port 5 on the Ethernet switch.

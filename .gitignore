@@ -17,3 +17,6 @@
 # Avoid downloaded parts libraries
 *.sqlite3
 /scripts/**.z*
+
+# Avoid scratchpad
+/tmp
