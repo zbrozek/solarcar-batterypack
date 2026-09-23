@@ -1,6 +1,5 @@
 ## Changes to consider for next revision
 * Add e-paper interface for status indication.
-* Update LAN8670 to D0 stepping to resolve errata.
 
 ## Changes completed from 1.0 --> 1.1
 * Added P600_VERTICAL to the solid-connect rule.
@@ -57,3 +56,6 @@
 * Increased package size for digital input current-limiting resistor.
 * Added VN9E30F direct input GPIO connections.
 * Updated triple-buck ENx divider to account for EN pin leakage.
+* Added insulation monitoring circuit.
+* Added unity gain buffers to MCP3914B voltage inputs to mitigate leakage.
+* Updated LAN8670 to D0 stepping to resolve errata.
