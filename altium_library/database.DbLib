@@ -19,43 +19,31 @@ LibrarySearchPath=
 OrcadMultiValueDelimiter=,
 SearchSubDirectories=0
 SchemaName=ALTIUM
-LastFocusedTable=capacitor.csv
+LastFocusedTable=tvs.csv
 [Table1]
 SchemaName=
 TableName=capacitor.csv
 Enabled=True
 UserWhere=1
 UserWhereText=[Manufacturer Part Number] = '{Manufacturer Part Number}'
-BrowserOrder_Sorting=
-BrowserOrder_Grouping=
-BrowserOrder_Visible=SymbolName0=142|SymbolLibrary0=201|FootprintName0=156|FootprintLibrary0=215|Manufacturer Part Number0=280|Manufacturer0=334|Package0=103|Voltage Rating0=153|Dielectric0=110|Capacitance0=133|Supplier 10=116|Supplier Part Number 10=220|Supplier 20=116|Supplier Part Number 20=220|ComponentLink1Description0=256|ComponentLink1URL0=1136
 [Table2]
 SchemaName=
 TableName=fb.csv
 Enabled=True
 UserWhere=1
 UserWhereText=[Manufacturer Part Number] = '{Manufacturer Part Number}'
-BrowserOrder_Sorting=
-BrowserOrder_Grouping=
-BrowserOrder_Visible=SymbolName0=142|SymbolLibrary0=195|FootprintName0=156|FootprintLibrary0=209|Current Rating (mA)0=193|Manufacturer Part Number0=247|Manufacturer0=328|Package0=103|Z @ 100 MHz0=143|DCR (mOhms)0=148|Supplier 10=116|Supplier Part Number 10=220|Supplier 20=116|Supplier Part Number 20=220|ComponentLink1Description0=256|ComponentLink1URL0=1088
 [Table3]
 SchemaName=
 TableName=inductor.csv
 Enabled=True
 UserWhere=1
 UserWhereText=[Manufacturer Part Number] = '{Manufacturer Part Number}'
-BrowserOrder_Sorting=
-BrowserOrder_Grouping=
-BrowserOrder_Visible=SymbolName0=163|SymbolLibrary0=195|FootprintName0=177|FootprintLibrary0=231|Manufacturer Part Number0=247|Manufacturer0=151|Inductance (uH)0=162|Current Rating (mA)0=193|DCR (mOhms)0=148|Supplier 10=116|Supplier Part Number 10=269|Supplier 20=116|Supplier Part Number 20=220|ComponentLink1Description0=256|ComponentLink1URL0=613
 [Table4]
 SchemaName=
 TableName=misc.csv
 Enabled=True
 UserWhere=1
 UserWhereText=[Manufacturer Part Number] = '{Manufacturer Part Number}'
-BrowserOrder_Sorting=
-BrowserOrder_Grouping=
-BrowserOrder_Visible=SymbolName0=167|SymbolLibrary0=159|FootprintName0=156|FootprintLibrary0=266|Manufacturer Part Number0=247|Manufacturer0=143|Supplier 10=116|Supplier Part Number 10=220|Supplier 20=116|Supplier Part Number 20=220|ComponentLink1Description0=256|ComponentLink1URL0=585
 [Table5]
 SchemaName=
 TableName=resistor.csv
@@ -65,6 +53,15 @@ UserWhereText=[Manufacturer Part Number] = '{Manufacturer Part Number}'
 BrowserOrder_Sorting=
 BrowserOrder_Grouping=
 BrowserOrder_Visible=SymbolName0=154|SymbolLibrary0=186|FootprintName0=156|FootprintLibrary0=200|Manufacturer Part Number0=310|Manufacturer0=328|Package0=103|Power Rating (mW)0=187|Value0=83|Tolerance0=114|Temperature Coefficient0=224|Supplier 10=116|Supplier Part Number 10=220|Supplier 20=116|Supplier Part Number 20=220|ComponentLink1Description0=256|ComponentLink1URL0=1075
+[Table6]
+SchemaName=
+TableName=tvs.csv
+Enabled=True
+UserWhere=1
+UserWhereText=[Manufacturer Part Number] = '{Manufacturer Part Number}'
+BrowserOrder_Sorting=
+BrowserOrder_Grouping=
+BrowserOrder_Visible=Manufacturer Part Number0=247|Manufacturer0=148|Peak Pulse Power Rating (W)0=258|Capacitance Max (pF)0=203|Standoff Voltage (V)0=194|Polarity0=104|SymbolName0=191|SymbolLibrary0=174|FootprintName0=156|FootprintLibrary0=188|Supplier 10=116|Supplier Part Number 10=220|Supplier 20=116|Supplier Part Number 20=220|ComponentLink1Description0=256|ComponentLink1URL0=388|Specification Notes0=1282
 [FieldMap1]
 Options=FieldName=capacitor.csv.SymbolName|TableNameOnly=capacitor.csv|FieldNameOnly=SymbolName|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
 [FieldMap2]
@@ -107,3 +104,11 @@ Options=FieldName=resistor.csv.SymbolLibrary|TableNameOnly=resistor.csv|FieldNam
 Options=FieldName=resistor.csv.FootprintName|TableNameOnly=resistor.csv|FieldNameOnly=FootprintName|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
 [FieldMap21]
 Options=FieldName=resistor.csv.FootprintLibrary|TableNameOnly=resistor.csv|FieldNameOnly=FootprintLibrary|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap22]
+Options=FieldName=tvs.csv.SymbolName|TableNameOnly=tvs.csv|FieldNameOnly=SymbolName|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap23]
+Options=FieldName=tvs.csv.SymbolLibrary|TableNameOnly=tvs.csv|FieldNameOnly=SymbolLibrary|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap24]
+Options=FieldName=tvs.csv.FootprintName|TableNameOnly=tvs.csv|FieldNameOnly=FootprintName|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap25]
+Options=FieldName=tvs.csv.FootprintLibrary|TableNameOnly=tvs.csv|FieldNameOnly=FootprintLibrary|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0

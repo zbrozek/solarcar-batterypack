@@ -1,0 +1,2 @@
+"Manufacturer Part Number","Manufacturer","Power (W)","Capacitance (pF)","Standoff (V)","Polarity","SymbolName","SymbolLibrary","FootprintName","FootprintLibrary","Supplier 1","Supplier Part Number 1","Supplier 2","Supplier Part Number 2","ComponentLink1Description","ComponentLink1URL"
+"TPD1E01B04DPYR","Texas Instruments","27","0.23","3.6","Bidirectional","__template_diode_tvs_bi","symbols/diode.SchLib","TI_DPY0002A","footprints/diode.PcbLib","Digikey","296-48721-1-ND","LCSC","C779389","Datasheet","https://www.ti.com/lit/ds/symlink/tpd1e01b04.pdf"

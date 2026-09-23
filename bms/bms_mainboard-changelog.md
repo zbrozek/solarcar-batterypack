@@ -1,12 +1,12 @@
-## Changes to consider for 1.x to 2.0
+## Changes to consider for next revision
 * Add e-paper interface for status indication.
+* Update LAN8670 to D0 stepping to resolve errata.
 
 ## Changes completed from 1.0 --> 1.1
 * Added P600_VERTICAL to the solid-connect rule.
 * Added TO-247-2_VERTICAL to the solid-connect rule.
 * Fixed swapped SWDIO and SWCLK on STM32F103.
 * Connected TPS79933 GND pin to GND.
-* Changed VBUS_DET divider upper resistor to 49.9k ohms.
 * Removed 33 ohm series resistors on USB-C connector.
 * Changed 24 MHz crystal BOM item and matching capacitors due to stocking.
 * Added LED to HV_nBLEED signal.
@@ -47,6 +47,13 @@
 * Adjusted optical SSR LED drive strengths upwards to cover more edge cases.
 * Added TAS5720ATDAPRQ1 audio amplifier; powered from LV2.
 * Fixed top sheet note about PWM fractions for precharge relay current targets.
-
-## Changes remaining to do from 1.0 --> 1.1
-* Add RTL8152B and connect it to port 5 on the Ethernet switch.
+* Added RTL8152B and connected it to port 5 on the Ethernet switch.
+* Added diode-OR on GNSS receiver V_BCKP domain from coin cell and VCC.
+* Reduced capacitance of GNSS receiver TVS.
+* Increased base drive resistance on antenna bias switch.
+* Separated center taps on Ethernet switch magnetic center taps.
+* Reduce VN9E30F supply resistor to 150 ohms to match 3.3v recommendation.
+* Fixed missing pull-up resistor for Ethernet switch interrupt pin.
+* Increased package size for digital input current-limiting resistor.
+* Added VN9E30F direct input GPIO connections.
+* Updated triple-buck ENx divider to account for EN pin leakage.
