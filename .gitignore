@@ -9,6 +9,9 @@
 **/outputs
 **/__Previews
 
+# Avoid non-source Python files
+__pycache__
+
 # Avoid junk data related to test builds
 /testing/arrangement/*.csv
 /testing/cell/results/*.csv

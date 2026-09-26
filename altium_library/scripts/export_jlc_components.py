@@ -4,6 +4,8 @@ import csv
 import re
 import sys
 
+from sscp_database import canonical_footprint_library
+
 def sanitize_string(val):
     if not isinstance(val, str):
         val = str(val) if val is not None else ""
@@ -247,7 +249,8 @@ def main():
             'Manufacturer Part Number', 'Manufacturer', 'SymbolName', 'SymbolLibrary', 
             'FootprintName', 'FootprintLibrary', 'Package', 'Power Rating (mW)', 'Value', 
             'Tolerance', 'Temperature Coefficient', 'Supplier 1', 'Supplier Part Number 1', 
-            'Supplier 2', 'Supplier Part Number 2', 'ComponentLink1Description', 'ComponentLink1URL'
+            'Supplier 2', 'Supplier Part Number 2', 'Supplier 3', 'Supplier Part Number 3',
+            'ComponentLink1Description', 'ComponentLink1URL'
         ])
         for r in resistors:
             writer.writerow([
@@ -256,7 +259,7 @@ def main():
                 '__template_resistor',
                 'symbols/resistor.SchLib',
                 sanitize_string(r['footprint']),
-                'footprints/resistor.PcbLib',
+                canonical_footprint_library('footprints/resistor.PcbLib'),
                 sanitize_string(r['package']),
                 f"{round(r['power_mw'], 1):g}",
                 sanitize_string(r['value_formatted']),
@@ -264,14 +267,16 @@ def main():
                 sanitize_string(r['tcr_str']) if r['value_ohms'] != 0.0 else "",
                 '',
                 '',
-                'LCSC',
+                'LCSC' if sanitize_string(r['lcsc']) else '',
                 sanitize_string(r['lcsc']),
+                '',
+                '',
                 'Datasheet',
                 sanitize_string(r['datasheet'])
             ])
             
-    # --- Capacitors ---
-    print("Processing Capacitors...")
+    # --- MLCC Capacitors ---
+    print("Processing MLCC Capacitors...")
     cursor.execute("""
         SELECT c.extra, m.name as manufacturer_name, c.package, c.lcsc as lcsc_number, c.stock, c.datasheet, c.basic
         FROM components c
@@ -344,36 +349,49 @@ def main():
     # Sort: value -> voltage -> dielectric -> package
     capacitors.sort(key=lambda x: (x['cap_farads'], x['voltage'], x['dielectric'] or '', x['package']))
     
-    with open('capacitors.csv', 'w', newline='', encoding='utf-8') as f:
+    with open('capacitor-mlcc.csv', 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         writer.writerow([
             'Manufacturer Part Number', 'Manufacturer', 'SymbolName', 'SymbolLibrary', 
-            'FootprintName', 'FootprintLibrary', 'Package', 'Voltage Rating', 'Dielectric', 
-            'Capacitance', 'Supplier 1', 'Supplier Part Number 1', 'Supplier 2', 'Supplier Part Number 2', 
+            'FootprintName', 'FootprintLibrary', 'FootprintName2', 'FootprintLibrary2',
+            'Package', 'Dielectric', 'Capacitance', 'Voltage Rating',
+            'Supplier 1', 'Supplier Part Number 1', 'Supplier 2', 'Supplier Part Number 2',
+            'Supplier 3', 'Supplier Part Number 3',
             'ComponentLink1Description', 'ComponentLink1URL'
         ])
         for c in capacitors:
+            capacitance = c['cap_formatted']
+            capacitance = f"{capacitance[:-1]} {capacitance[-1]}F"
+            voltage = re.sub(
+                r'\s*([kK]?)[vV]$',
+                lambda match: f" {match.group(1).lower()}V",
+                c['voltage_str'].strip(),
+            )
             writer.writerow([
                 sanitize_string(c['mpn']),
                 sanitize_string(c['manufacturer']),
                 '__template_cap',
                 'symbols/capacitor.SchLib',
                 sanitize_string(c['footprint']),
-                'footprints/capacitor.PcbLib',
+                canonical_footprint_library('footprints/capacitor.PcbLib'),
+                '',
+                '',
                 sanitize_string(c['package']),
-                sanitize_string(c['voltage_str']),
                 sanitize_string(c['dielectric']),
-                sanitize_string(c['cap_formatted']),
+                sanitize_string(capacitance),
+                sanitize_string(voltage),
                 '',
                 '',
-                'LCSC',
+                'LCSC' if sanitize_string(c['lcsc']) else '',
                 sanitize_string(c['lcsc']),
+                '',
+                '',
                 'Datasheet',
                 sanitize_string(c['datasheet'])
             ])
 
     print(f"Exported {len(resistors)} resistors to resistors.csv")
-    print(f"Exported {len(capacitors)} capacitors to capacitors.csv")
+    print(f"Exported {len(capacitors)} MLCC capacitors to capacitor-mlcc.csv")
 
     # --- Ferrite Beads ---
     print("Processing Ferrite Beads...")
@@ -453,6 +471,7 @@ def main():
             'Manufacturer Part Number', 'Manufacturer', 'SymbolName', 'SymbolLibrary', 
             'FootprintName', 'FootprintLibrary', 'Package', 'Z @ 100 MHz', 'DCR (mOhms)', 
             'Current Rating (mA)', 'Supplier 1', 'Supplier Part Number 1', 'Supplier 2', 'Supplier Part Number 2', 
+            'Supplier 3', 'Supplier Part Number 3',
             'ComponentLink1Description', 'ComponentLink1URL'
         ])
         for c in fbs:
@@ -462,15 +481,17 @@ def main():
                 '__template_fb',
                 'symbols/inductor.SchLib',
                 sanitize_string(c['footprint']),
-                'footprints/inductor.PcbLib',
+                canonical_footprint_library('footprints/inductor.PcbLib'),
                 sanitize_string(c['package']),
                 f"{c['impedance']:g}",
                 f"{c['dcr'] * 1000.0:g}",
                 f"{c['current_ma']:g}",
                 '',
                 '',
-                'LCSC',
+                'LCSC' if sanitize_string(c['lcsc']) else '',
                 sanitize_string(c['lcsc']),
+                '',
+                '',
                 'Datasheet',
                 sanitize_string(c['datasheet'])
             ])
@@ -556,9 +577,10 @@ def main():
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         writer.writerow([
             'Manufacturer Part Number', 'Manufacturer', 'SymbolName', 'SymbolLibrary', 
-            'FootprintName', 'FootprintLibrary', 'Package', 'DC Voltage Rating (V)', 'AC Voltage Rating (V)', 
+            'FootprintName', 'FootprintLibrary', 'DC Voltage Rating (V)', 'AC Voltage Rating (V)', 
             'Current Rating (mA)', 'Supplier 1', 'Supplier Part Number 1', 'Supplier 2', 'Supplier Part Number 2', 
-            'ComponentLink1Description', 'ComponentLink1URL'
+            'Supplier 3', 'Supplier Part Number 3',
+            'Description', 'ComponentLink1Description', 'ComponentLink1URL'
         ])
         for c in fuses:
             dc_val = f"{c['dc_voltage']:g}" if c['dc_voltage'] is not None else ""
@@ -570,14 +592,16 @@ def main():
                 'symbols/fuse.SchLib',
                 sanitize_string(c['footprint']),
                 'footprints/fuse.PcbLib',
-                sanitize_string(c['package']),
                 dc_val,
                 ac_val,
                 f"{c['current_ma']:g}",
                 '',
                 '',
-                'LCSC',
+                'LCSC' if sanitize_string(c['lcsc']) else '',
                 sanitize_string(c['lcsc']),
+                '',
+                '',
+                '',
                 'Datasheet',
                 sanitize_string(c['datasheet'])
             ])

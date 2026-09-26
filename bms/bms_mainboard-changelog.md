@@ -14,7 +14,7 @@
 * Connected GNSS receiver wake line.
 * Removed blocking diode and pull up resistor on GNSS nRST.
 * Reduced slip fit to press fit on Wurth M4 terminals.
-* Updated BOM to switch from MCP3913 to MCP3913B.
+* Updated BOM to switch from MCP3913 to MCP3914B.
 * Eliminated "shunt filter" on voltage sense channel.
 * Harmonized -3dB corner for voltage and current sensing.
 * Nudged MP6519 circuits to avoid contactor fill ports.
