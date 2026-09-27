@@ -280,3 +280,63 @@ Options=FieldName=led.csv.FootprintLibrary|TableNameOnly=led.csv|FieldNameOnly=F
 Options=FieldName=led.csv.FootprintName2|TableNameOnly=led.csv|FieldNameOnly=FootprintName2|FieldType=1|ParameterName=[Footprint Ref 2]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
 [FieldMap85]
 Options=FieldName=led.csv.FootprintLibrary2|TableNameOnly=led.csv|FieldNameOnly=FootprintLibrary2|FieldType=1|ParameterName=[Footprint Path 2]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[Table15]
+SchemaName=
+TableName=crystal.csv
+Enabled=True
+UserWhere=1
+UserWhereText=[Manufacturer Part Number] = '{Manufacturer Part Number}'
+[FieldMap86]
+Options=FieldName=crystal.csv.SymbolName|TableNameOnly=crystal.csv|FieldNameOnly=SymbolName|FieldType=1|ParameterName=[Library Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap87]
+Options=FieldName=crystal.csv.SymbolLibrary|TableNameOnly=crystal.csv|FieldNameOnly=SymbolLibrary|FieldType=1|ParameterName=[Library Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap88]
+Options=FieldName=crystal.csv.FootprintName|TableNameOnly=crystal.csv|FieldNameOnly=FootprintName|FieldType=1|ParameterName=[Footprint Ref]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap89]
+Options=FieldName=crystal.csv.FootprintLibrary|TableNameOnly=crystal.csv|FieldNameOnly=FootprintLibrary|FieldType=1|ParameterName=[Footprint Path]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap90]
+Options=FieldName=crystal.csv.FootprintName2|TableNameOnly=crystal.csv|FieldNameOnly=FootprintName2|FieldType=1|ParameterName=[Footprint Ref 2]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap91]
+Options=FieldName=crystal.csv.FootprintLibrary2|TableNameOnly=crystal.csv|FieldNameOnly=FootprintLibrary2|FieldType=1|ParameterName=[Footprint Path 2]|VisibleOnAdd=False|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap92]
+Options=FieldName=bjt.csv.Voltage|TableNameOnly=bjt.csv|FieldNameOnly=Voltage|FieldType=1|ParameterName=Voltage|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap93]
+Options=FieldName=bjt.csv.Current|TableNameOnly=bjt.csv|FieldNameOnly=Current|FieldType=1|ParameterName=Current|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap94]
+Options=FieldName=capacitor-electrolytic.csv.Voltage Rating|TableNameOnly=capacitor-electrolytic.csv|FieldNameOnly=Voltage Rating|FieldType=1|ParameterName=Voltage Rating|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap95]
+Options=FieldName=capacitor-electrolytic.csv.Capacitance|TableNameOnly=capacitor-electrolytic.csv|FieldNameOnly=Capacitance|FieldType=1|ParameterName=Capacitance|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap96]
+Options=FieldName=capacitor-film.csv.Voltage Rating|TableNameOnly=capacitor-film.csv|FieldNameOnly=Voltage Rating|FieldType=1|ParameterName=Voltage Rating|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap97]
+Options=FieldName=capacitor-film.csv.Capacitance|TableNameOnly=capacitor-film.csv|FieldNameOnly=Capacitance|FieldType=1|ParameterName=Capacitance|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap98]
+Options=FieldName=capacitor-mlcc.csv.Voltage Rating|TableNameOnly=capacitor-mlcc.csv|FieldNameOnly=Voltage Rating|FieldType=1|ParameterName=Voltage Rating|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap99]
+Options=FieldName=capacitor-mlcc.csv.Capacitance|TableNameOnly=capacitor-mlcc.csv|FieldNameOnly=Capacitance|FieldType=1|ParameterName=Capacitance|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap100]
+Options=FieldName=crystal.csv.Frequency|TableNameOnly=crystal.csv|FieldNameOnly=Frequency|FieldType=1|ParameterName=Frequency|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap101]
+Options=FieldName=crystal.csv.Capacitance|TableNameOnly=crystal.csv|FieldNameOnly=Capacitance|FieldType=1|ParameterName=Capacitance|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap102]
+Options=FieldName=diode.csv.Vr|TableNameOnly=diode.csv|FieldNameOnly=Vr|FieldType=1|ParameterName=Vr|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap103]
+Options=FieldName=diode.csv.Current|TableNameOnly=diode.csv|FieldNameOnly=Current|FieldType=1|ParameterName=Current|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap104]
+Options=FieldName=fb.csv.Z @ 100 MHz|TableNameOnly=fb.csv|FieldNameOnly=Z @ 100 MHz|FieldType=1|ParameterName=Z @ 100 MHz|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap105]
+Options=FieldName=fuse.csv.VDC|TableNameOnly=fuse.csv|FieldNameOnly=VDC|FieldType=1|ParameterName=VDC|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap106]
+Options=FieldName=fuse.csv.Current|TableNameOnly=fuse.csv|FieldNameOnly=Current|FieldType=1|ParameterName=Current|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap107]
+Options=FieldName=inductor.csv.Inductance (µH)|TableNameOnly=inductor.csv|FieldNameOnly=Inductance (µH)|FieldType=1|ParameterName=Inductance (µH)|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap108]
+Options=FieldName=inductor.csv.Current Rating (mA)|TableNameOnly=inductor.csv|FieldNameOnly=Current Rating (mA)|FieldType=1|ParameterName=Current Rating (mA)|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap109]
+Options=FieldName=resistor.csv.Value|TableNameOnly=resistor.csv|FieldNameOnly=Value|FieldType=1|ParameterName=Value|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap110]
+Options=FieldName=mosfet.csv.Voltage|TableNameOnly=mosfet.csv|FieldNameOnly=Voltage|FieldType=1|ParameterName=Voltage|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap111]
+Options=FieldName=mosfet.csv.Current|TableNameOnly=mosfet.csv|FieldNameOnly=Current|FieldType=1|ParameterName=Current|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
+[FieldMap112]
+Options=FieldName=tvs.csv.Standoff (V)|TableNameOnly=tvs.csv|FieldNameOnly=Standoff (V)|FieldType=1|ParameterName=Standoff (V)|VisibleOnAdd=True|AddMode=0|RemoveMode=0|UpdateMode=0
