@@ -322,6 +322,23 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[Document17]
+DocumentPath=gpio_pcal9535a_expander.Harness
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
 [ProjectVariant1]
 UniqueId=49d0e692-906b-43ec-8c8d-15c7f8a20472
 Description=0
@@ -1001,36 +1018,6 @@ OutputName12=Export STEP
 OutputDocumentPath12=
 OutputVariantName12=
 OutputDefault12=0
-OutputType13=Ansoft Neutral
-OutputName13=Ansoft Neutral (AutoPCB)
-OutputDocumentPath13=
-OutputVariantName13=
-OutputDefault13=0
-OutputType14=HyperLynx
-OutputName14=HyperLynx (AutoPCB)
-OutputDocumentPath14=
-OutputVariantName14=
-OutputDefault14=0
-OutputType15=MathWorks
-OutputName15=MathWorks (AutoPCB)
-OutputDocumentPath15=
-OutputVariantName15=
-OutputDefault15=0
-OutputType16=Orcad v7 Capture Design
-OutputName16=Orcad v7 Capture Design (AutoSCH)
-OutputDocumentPath16=
-OutputVariantName16=
-OutputDefault16=0
-OutputType17=P-CAD ASCII
-OutputName17=P-CAD ASCII (AutoPCB)
-OutputDocumentPath17=
-OutputVariantName17=
-OutputDefault17=0
-OutputType18=P-CAD V16 Schematic Design
-OutputName18=P-CAD V16 Schematic Design (AutoSCH)
-OutputDocumentPath18=
-OutputVariantName18=
-OutputDefault18=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
