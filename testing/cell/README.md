@@ -32,9 +32,9 @@ Some constants defined at the top of the script can be tweaked to suit your part
 * _kDischargeCompianceLimit_volts_ sets the lower voltage limit when sinking current out of the cell.
 * _kR0PulseCurrent_amps_ sets the pulse current used when estimating the R0 impedance of the cell.
 * _kR0PulseDuration_seconds_ sets the length of the pulse when testing the R0 impedance of the cell.
-* _kDcirPulseCurrent_amps_ sets the pulse current used when estimating the DC impedance of the cell.
-* _kDcirPulseDuration_seconds_ sets the length of the pulse when testing the DC impedance of the cell.
-* _kLeakageDwellTime_seconds_ sets the time that the instrument will wait for the current to settle to determine the leakage of the cell.
+* _kDcirCurrent_amps_ sets the current used when estimating the DC impedance of the cell.
+* _kDcirDuration_seconds_ sets the length of the current pulse when testing the DC impedance of the cell.
+* _kVoltageSenseDwell_seconds_ sets the settling time after the source is set to zero current before the open circuit voltage is read.
 
 # Handy links
 * [Keithley 2400-series user's manual, including SCPI programming](https://download.tek.com/manual/2400S-900-01_K-Sep2011_User.pdf)
